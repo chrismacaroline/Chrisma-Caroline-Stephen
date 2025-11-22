@@ -20,7 +20,7 @@ function UIUXProjects({ id, Title, Description, selectuiuxproject,Buttonlabel, I
             <Card.Title style={{fontSize: "25px", padding: "10px", color : "#474787", textAlign : "center", fontFamily : "roboto-medium"}}>{Title}</Card.Title>
             <Card.Text style={{fontSize: "15px", padding: "10px", color : "#474787", textAlign : "center", fontFamily : "roboto-medium"}}>{Description}</Card.Text>
             <Button 
-             style ={{backgroundColor : " #2C2C54", color : "white", margin : "5px", alignItems : "center", fontFamily : "roboto-medium"}}
+             style ={{backgroundColor : " #212529", color : "212529", margin : "5px", alignItems : "center", fontFamily : "roboto-medium"}}
               onClick={() =>
                 selectuiuxproject(id)}
             >

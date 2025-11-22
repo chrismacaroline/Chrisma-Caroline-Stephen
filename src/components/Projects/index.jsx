@@ -13,7 +13,7 @@ function Projects ({id,image,name, github,deployed,skill, selectProject}) {
         <Card.Title style={{fontSize: "25px", padding: "10px", color : "#474787", textAlign : "center", fontFamily : "roboto-medium"}}>{name}</Card.Title>
         <Card.Text style={{fontSize: "15px", padding: "10px", color : "#474787", textAlign : "center", fontFamily : "roboto-medium"}}>{skill}</Card.Text>
       
-        <Button id={id}  style ={{backgroundColor : " #2C2C54", color : "white", margin : "5px", alignItems : "center", fontFamily : "roboto-medium"}} onClick={() => selectProject(id)}>
+        <Button id={id}  style ={{backgroundColor : " #212529", color : "212529", margin : "5px", alignItems : "center", fontFamily : "roboto-medium"}} onClick={() => selectProject(id)}>
         FIND OUT MORE
       </Button>
       </Card.Body>

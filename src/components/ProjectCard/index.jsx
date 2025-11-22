@@ -28,8 +28,8 @@ function ProjectCard({
                   href={github}
                   target="_blank"
                   style={{
-                    backgroundColor: "#2C2C54",
-                    color: "white",
+                    backgroundColor: "#212529",
+                    color: "212529",
                     margin: "5px",
                     padding: "10px",
                     textDecoration: "none",
@@ -49,8 +49,8 @@ function ProjectCard({
                   href={deployed}
                   target="_blank"
                   style={{
-                    backgroundColor: "#2C2C54",
-                    color: "white",
+                    backgroundColor: "#212529",
+                    color: "212529",
                     margin: "5px",
                     padding: "10px",
                     textDecoration: "none",

@@ -3,26 +3,43 @@
   justify-content: right;
   flex-grow: 1;
   width: vw;
-  background-color:#2C2C54; 
-  color: #211C6A;
+  background-color:#f8f9fa; 
+  color: #212529;
   font-size: 20px;
   padding:5px;
 
 }
 .custom-toggler {
-  color: white; 
+  color: #f8f9fa; 
 }
 
 .navbarmain {
-  width: vw;
-  height: 10%;
-  background-color:#2C2C54; 
-  color: #211C6A;  
+  width: 100vw;
+  padding: 24px;
+  height: 20%;
+  background-color:#f8f9fa; 
+  color: #212529;  
   text-decoration: none;
+  text-underline-offset: 4px;
 }
 
 .nav-link {
   padding: 100px;
   font-size: 400px;
+  text-decoration: none !important;
+  color: #212529;
 }
 
+.navbarmain a {
+  text-decoration: none;        
+  color: #212529;
+}
+
+.navbarmain a:hover {
+  text-decoration: underline;    
+  text-underline-offset: 4px;     
+}
+.nav-link:hover {
+  text-decoration: underline !important;
+  text-underline-offset: 4px;
+}
