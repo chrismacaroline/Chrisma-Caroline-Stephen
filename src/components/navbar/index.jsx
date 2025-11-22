@@ -2,13 +2,14 @@ import Container from "react-bootstrap/Container";
 import React, { useState } from "react";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./style.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 function NavBar() {
   // const [expanded, setExpanded] = useState(false);
+  const location = useLocation ();
   return (
     <Navbar expand="lg" className="container-fluid navbarmain">
   <Container className="p-2">
@@ -23,7 +24,7 @@ function NavBar() {
         {/* LEFT LINK */}
         <Link
           id= "nav-link"
-          className="me-auto"
+          className={`me-auto custom-nav-link ${location.pathname === "/" ? "active" : ""}`}
           style={{
             color: "#212529",
             fontFamily: "roboto-black-italic",
@@ -37,6 +38,7 @@ function NavBar() {
         <div className="d-flex gap-4">
           <Link
             id= "nav-link"
+            className={`custom-nav-link ${location.pathname === "/projects" ? "active" : ""}`}
             style={{
               color: "#212529",
               fontFamily: "roboto-black-italic",
@@ -49,6 +51,7 @@ function NavBar() {
 
           <Link
             id= "nav-link"
+            className={`custom-nav-link ${location.pathname === "/uiuxprojects" ? "active" : ""}`}
             style={{
               color: "#212529",
               fontFamily: "roboto-black-italic",
@@ -61,6 +64,7 @@ function NavBar() {
 
           <Link
             id= "nav-link"
+            className={`custom-nav-link ${location.pathname === "/contact" ? "active" : ""}`}
             style={{
               color: "#212529",
               fontFamily: "roboto-black-italic",

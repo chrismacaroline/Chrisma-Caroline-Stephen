@@ -43,3 +43,8 @@
   text-decoration: underline !important;
   text-underline-offset: 4px;
 }
+.custom-nav-link.active {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  /* font-weight: 600; */
+}
