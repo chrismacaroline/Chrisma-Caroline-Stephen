@@ -3,7 +3,7 @@ import "../main.css"
 
 const Skills = () => {
   const skillsbutton = {
-    backgroundColor: "#2C2C54",
+    backgroundColor: "#212529",
     fontFamily: "roboto-black-italic",
     color: "#ECECEC",
     paddingLeft: "10px",
@@ -30,7 +30,7 @@ const Skills = () => {
             marginTop: "10px",
             marginBottom : "10px",
             textAlign: "center",
-            color: "#2C2C54",
+            color: "#212529",
           }}
         >
           Skills

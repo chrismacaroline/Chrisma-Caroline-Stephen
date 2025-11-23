@@ -44,13 +44,13 @@ const Contact = () => {
   // }
 
   return (
-    <div className="container-fluid d-flex" style={{ backgroundColor: "#2C2C54", minHeight : "80vh"}}>
-      <Container className="container-fluid d-flex projectbackgrnd" style={{ color: "#2C2C54" }}>
+    <div className="container-fluid d-flex flex-column min-vh-100" style={{ backgroundColor: "#f8f9fa", minHeight : "80vh"}}>
+      <Container className="container-fluid d-flex projectbackgrnd" style={{ color: "#212529" }}>
         <Row className="justify-content-center align-items-center p-5">
           <p
            
             style={{
-              color: "white",
+              color: "212529",
               fontSize: "1.5rem",
               fontFamily: "roboto-medium",
               textAlign: "center",
@@ -61,7 +61,7 @@ const Contact = () => {
           <p
            
             style={{
-              color: "white",
+              color: "212529",
               fontSize: "1.5rem",
               fontFamily: "roboto-medium",
               textAlign: "center",
@@ -88,7 +88,7 @@ const Contact = () => {
                   marginTop: "30px",
                   marginBottom: "30px",
                   fontSize: "20px",
-                  backgroundColor: "white",
+                  backgroundColor: "212529",
                   color: "#474787",
                 }}
               >
@@ -104,14 +104,14 @@ const Contact = () => {
       justifyContent: "center", 
       flexDirection : "column",
       alignItems: "center", 
-      color : "white",
+      color : "212529",
       fontSize : "18px",
       fontFamily : "roboto-medium",
       padding : '5px'
     }}>
       <Form.Group className="mb-3 form d-flex justify-content-center" controlId="formBasicEmail"> 
       
-        <div style={{fontSize: "25px", padding: "50px", color : "white",fontFamily : "roboto-medium" }}>
+        <div style={{fontSize: "25px", padding: "50px", color : "212529",fontFamily : "roboto-medium" }}>
           Drop me a message here, and i'll be in touch soon!
         </div>
         <Form.Label>First Name</Form.Label>
@@ -139,7 +139,7 @@ const Contact = () => {
         
           placeholder="Your message here" />
       </Form.Group>
-      <Button type ="submit" style ={{color : "white", fontSize : "20px", backgroundColor : "#AAABB8", margin: "35px", border : "#64002f"}} >
+      <Button type ="submit" style ={{color : "212529", fontSize : "20px", backgroundColor : "#AAABB8", margin: "35px", border : "#64002f"}} >
         Submit
       </Button>
     </Form> */}

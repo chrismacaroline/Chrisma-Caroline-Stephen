@@ -10,7 +10,7 @@ html, body, #root {
 }
 :root {
   --red:#64002f; 
-  --white : rgb(238, 238, 238); 
+  --212529 : rgb(238, 238, 238); 
 }
 .namdhinggo-regular {
   font-family: "Namdhinggo", serif;
@@ -163,12 +163,12 @@ a {
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 30px;
   /* background-color: #AAABB8; */
-  color:  #2C2C54;
+  color:  #212529;
 }
 
 /* .skillsbutton{
   background-color : "#ECECEC";
-   color : "#2C2C54";
+   color : "#212529";
     padding : "2px";
      border : "5px solid #ECECEC" ;
      border-radius: "10px";
@@ -196,7 +196,7 @@ a {
 }
 @media (max-width: 768px) {
   .slbtn {
-    /* background-color: "#2C2C54"; */
+    /* background-color: "#212529"; */
     /* font-family: "roboto-black-italic", */
     /* color: "#ECECEC", */
     padding-left: "0px";

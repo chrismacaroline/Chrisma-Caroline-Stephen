@@ -2,80 +2,85 @@ import Container from "react-bootstrap/Container";
 import React, { useState } from "react";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./style.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 function NavBar() {
   // const [expanded, setExpanded] = useState(false);
+  const location = useLocation ();
   return (
-    <Navbar
-      style={{ position: "relative" }}
-      expand="lg"
-      className="container-fluid navbarmain"
-    >
-      <Container className="justify-content-end">
-        {/* <Navbar.Brand as={Link} to="/" onClick={() => setExpanded(false)}>Chrisma</Navbar.Brand> */}
+    <Navbar expand="lg" className="container-fluid navbarmain">
+  <Container className="p-2">
 
-        <Navbar.Toggle
-          aria-controls="basic-navbar-nav"
-          className="custom-toggler"
+    <Navbar.Toggle aria-controls="basic-navbar-nav" className="custom-toggler">
+      <FontAwesomeIcon icon={faBars} style={{ color: "#212529" }} />
+    </Navbar.Toggle>
+
+    <Navbar.Collapse id="basic-navbar-nav" className="custom-toggler">
+      <Nav className="w-100 d-flex align-items-center">
+
+        {/* LEFT LINK */}
+        <Link
+          id= "nav-link"
+          className={`me-auto custom-nav-link ${location.pathname === "/" ? "active" : ""}`}
+          style={{
+            color: "#212529",
+            fontFamily: "roboto-black-italic",
+            fontSize: "24px",
+          }}
+          to="/"
         >
-          <FontAwesomeIcon icon={faBars} style={{ color: "white" }} />
-        </Navbar.Toggle>
-        <Navbar.Collapse id="basic-navbar-nav" className="custom-toggler">
-          <Nav>
-            {/* <Link><img  style={{height :"100%", width : "40%"}}src="/images/logo.png"/></Link> */}
-            <Link
-              style={{
-                color: "white",
-                paddingRight: "50px",
-                fontFamily: "roboto-black-italic",
-                textDecoration: "none",
-              }}
-              to="/"
-            >
-              Home
-            </Link>
-            <Link
-              style={{
-                color: "white",
-                paddingRight: "50px",
-                fontFamily: "roboto-black-italic",
-                textDecoration: "none",
-              }}
-              to="/projects"
-            >
-              Front-End Projects
-            </Link>
-            <Link
-              style={{
-                color: "white",
-                paddingRight: "50px",
-                fontFamily: "roboto-black-italic",
-                textDecoration: "none",
-              }}
-              to="/uiuxprojects"
-            >
-              UI/UX Projects
-            </Link>
-            {/* <Link style={{color:"white", paddingRight :"30px",fontFamily : "roboto-black-italic",textDecoration: "none"}} to="/links">LINKS</Link> */}
-            <Link
-              style={{
-                color: "white",
-                paddingRight: "50px",
-                fontFamily: "roboto-black-italic",
-                textDecoration: "none",
-              }}
-              to="/contact"
-            >
-              Contact
-            </Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+          Chrisma Caroline Stephen
+        </Link>
+
+        <div className="d-flex gap-4">
+          <Link
+            id= "nav-link"
+            className={`custom-nav-link ${location.pathname === "/projects" ? "active" : ""}`}
+            style={{
+              color: "#212529",
+              fontFamily: "roboto-black-italic",
+              fontSize: "24px",
+            }}
+            to="/projects"
+          >
+            Front-End Projects
+          </Link>
+
+          <Link
+            id= "nav-link"
+            className={`custom-nav-link ${location.pathname === "/uiuxprojects" ? "active" : ""}`}
+            style={{
+              color: "#212529",
+              fontFamily: "roboto-black-italic",
+              fontSize: "24px",
+            }}
+            to="/uiuxprojects"
+          >
+            UI/UX Projects
+          </Link>
+
+          <Link
+            id= "nav-link"
+            className={`custom-nav-link ${location.pathname === "/contact" ? "active" : ""}`}
+            style={{
+              color: "#212529",
+              fontFamily: "roboto-black-italic",
+              fontSize: "24px",
+            }}
+            to="/contact"
+          >
+            Contact
+          </Link>
+        </div>
+      </Nav>
+    </Navbar.Collapse>
+
+  </Container>
+</Navbar>
+
   );
 }
 

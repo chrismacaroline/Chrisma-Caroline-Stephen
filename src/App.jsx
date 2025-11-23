@@ -19,7 +19,7 @@ function App() {
     <Router>
       {/* basename={`/Chrisma-Caroline-Stephen`} */}
       <div>
-        <Header /> 
+        {/* <Header />  */}
         <NavBar />
         {/* <About /> */}
         

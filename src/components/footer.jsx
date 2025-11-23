@@ -13,8 +13,8 @@ const footerIconStyle = {
 
 const Footer = () => {
   return (
-    <div style={{backgroundColor : "#2C2C54", position : "relative"}}>
-      <Container fluid style={{ backgroundColor: "#2C2C54", height: "20%" }} className="d-flex align-items-center">
+    <div style={{backgroundColor : "#212529", position : "relative"}}>
+      <Container fluid style={{ backgroundColor: "#212529", height: "20%" }} className="d-flex align-items-center">
         <Row className="w-100">
           <Col className="d-flex footeri">
             {/* Icons */}

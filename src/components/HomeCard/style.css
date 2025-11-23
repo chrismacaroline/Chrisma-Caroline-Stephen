@@ -10,7 +10,7 @@
   justify-content: center; 
   align-items: center; 
   /* font-family: "allura-regular"; */
-  background-color:#f2cee6; 
+  background-color:#f8f9fa; 
   /* background-image: url("../../images/unsplah.jpg"); */
   background-size: cover;
   background-position: center; 
@@ -18,22 +18,22 @@
 }
 
 .tile {
-  color : "white";
+  color : "#212529";
 }
 
 
 .homecard-row {
   font-family: "roboto-regular-italic";
   font-size: "20px";
-  padding: "10px";
-  padding-top: "30px";
-  padding-bottom: "30px";
+  /* padding: "10px"; */
+  /* padding-top: "30px"; */
+  /* padding-bottom: "30px"; */
 }
 
 /* Remove padding for screens smaller than 768px */
 @media (max-width: 767px) {
   .homecard-row {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 4px;
+    padding-right: 4px;
   }
 }

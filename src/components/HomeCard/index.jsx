@@ -1,20 +1,20 @@
-import React from "react";
+
 import { Container, Row, Col, Card } from "react-bootstrap";
 import "./style.css";
-import Skills from "../skills";
-
 
 function HomeCard() {
   return (
     <>
-      <Container
-        className="container-fluid justify-content-center align-items-center"
+      <Container fluid
+        className="d-flex flex-column min-vh-100 justify-content-center align-items-center"
         style={{
-          fontFamily: "roboto-regular-italic",
-          paddingLeft: "2rem",
-          paddingRight: "2rem",
+          // fontFamily: "roboto-regular-italic",
+          // width: "100%",
+          paddingLeft: "8rem",
+          paddingRight: "8rem",
           paddingTop: "5rem",
-          minHeight : "65vh"
+          // minHeight : "165vh",
+          backgroundColor : "#f8f9fa"
         }}
       >
         <Row
