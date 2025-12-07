@@ -12,10 +12,7 @@ function ProjectCard({
   skill,
 }) {
   return (
-    <div className="projectcard">
-      <Row>
-        <Col xs={12} sm={10} md={8} lg={6} xl={4}>
-          <Card className="mb-4">
+          <Card xs={12} sm={10} md={8} lg={6} xl={4} className="container-fluid display-flex jsutify-content-center align-items-center mb-4">
             <Card.Img variant="top" src={image} className="img-fluid" style={{maxWidth: "100%", height: "auto"}} />
             <Card.Body>
               <Card.Title className="text-center">{name}</Card.Title>
@@ -69,9 +66,6 @@ function ProjectCard({
               </div>
             </Card.Body>
           </Card>
-        </Col>
-      </Row>
-    </div>
   );
 }
 

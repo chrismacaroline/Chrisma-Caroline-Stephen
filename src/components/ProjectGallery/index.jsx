@@ -22,7 +22,7 @@ const ProjectsGallery = () => {
             <Container className='container-fluid flex flex-column min-vh-100 align-items-start justify-content-start'>
                 {selectedProject ? (
                     
-                    <>   <div className="container-fluid d-flex flex-row justify-content-start align-items-start">
+                    <>   <div className="container-fluid d-flex flex-column justify-content-center  align-items-center">
                         
                         <ProjectCard className ="col mb-2" project={selectedProject} id={selectedProject.id}
                                     image={selectedProject.image}
@@ -33,7 +33,7 @@ const ProjectsGallery = () => {
                                     deployed={selectedProject.deployed} />
                                   
                                     
-                                  <div className ="btn" style ={{ backgroundColor : "#ECECEC", color : "#474787", margin : "10px", padding : "10px", fontFamily : "roboto-medium", fontSize : "20px"}} onClick={() => setSelectedProject(null)}>BACK TO GALLERY</div>
+                                  <div className ="btn" style ={{ backgroundColor : "#ECECEC", color : "#212529", margin : "10px", padding : "10px", fontFamily : "roboto-medium", fontSize : "20px"}} onClick={() => setSelectedProject(null)}>BACK TO GALLERY</div>
                         </div>
                     </>
                 ) : (
