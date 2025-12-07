@@ -14,8 +14,8 @@
 }
 
 .navbarmain {
-  width: 100vw;
-  padding: 24px;
+  /* width: full; */
+  /* padding: 24px; */
   height: 20%;
   background-color:#f8f9fa; 
   color: #212529;  
@@ -24,7 +24,7 @@
 }
 
 .nav-link {
-  padding: 100px;
+  /* padding: 100px; */
   font-size: 400px;
   text-decoration: none !important;
   color: #212529;

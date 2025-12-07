@@ -4,21 +4,16 @@ import Card from 'react-bootstrap/Card';
 import "./style.css"
 
 
-function Projects ({id,image,name, github,deployed,skill, selectProject}) {
+// eslint-disable-next-line react/prop-types
+function Projects ({id,image,name, selectProject}) {
   return (
-    <div className='container-fluid d-flex'>
-    <Card className ="d-flex flex-wrap justify-content-center col"style={{ width: '100%',maxWidth: "20rem", height : '26rem', border: "2px solid #64002f"}}>
-      <Card.Img variant="top" src={image} className='img-container' style = {{width : "100%"}}/>
-      <Card.Body className="content d-flex flex-column justify-content-center align-items-center">
-        <Card.Title style={{fontSize: "25px", padding: "10px", color : "#474787", textAlign : "center", fontFamily : "roboto-medium"}}>{name}</Card.Title>
-        <Card.Text style={{fontSize: "15px", padding: "10px", color : "#474787", textAlign : "center", fontFamily : "roboto-medium"}}>{skill}</Card.Text>
-      
-        <Button id={id}  style ={{backgroundColor : " #212529", color : "212529", margin : "5px", alignItems : "center", fontFamily : "roboto-medium"}} onClick={() => selectProject(id)}>
+    <Card onClick={() => selectProject(id)} className ="container-fluid d-flex flex-column align-items-start justify-content-start pt-5"style={{ width: '65%', height : '45rem'}}>
+        <Card.Title className="flex-row justify-content-start align-items-start" style={{fontSize: "25px", padding: "10px", color : "#212529", textAlign : "center", fontFamily : "roboto-medium"}}>{name}</Card.Title>
+        <Card.Img variant="top" src={image} className='img-container flex-column' style = {{width : "100%", height : "75%"}}/>
+        <Button id={id}  style ={{backgroundColor: "#f8f9fa" , color : "#212529", margin : "5px", alignItems : "left", fontFamily : "roboto-medium"}} onClick={() => selectProject(id)}>
         FIND OUT MORE
       </Button>
-      </Card.Body>
     </Card>
-    </div>
   );
 }
 

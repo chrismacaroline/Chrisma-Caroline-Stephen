@@ -17,12 +17,12 @@ const ProjectsGallery = () => {
     };
 
     return (
-        <div className= "container-fluid d-flex flex-column min-vh-100"style={{ backgroundColor : "#f8f9fa"}} >
+        < >
          
-            <Container className='container-fluid' style={{padding: "20px"}}>
+            <Container className='container-fluid flex flex-column min-vh-100 align-items-start justify-content-start'>
                 {selectedProject ? (
                     
-                    <>   <div className="container-fluid d-flex flex-column align-items-center">
+                    <>   <div className="container-fluid d-flex flex-row justify-content-start align-items-start">
                         
                         <ProjectCard className ="col mb-2" project={selectedProject} id={selectedProject.id}
                                     image={selectedProject.image}
@@ -37,10 +37,10 @@ const ProjectsGallery = () => {
                         </div>
                     </>
                 ) : (
-                    <Row>   
+                    <Row className='container-fluid d-flex align-items-start'>   
                         
                         {projectsData.map((project) => (
-                            <Col key={project.id} sm={12} md={6} lg={4}>
+                            <Col key={project.id} sm={12} md={12} lg={12}>
                                 <Projects
                                     id={project.id}
                                     description={project.description}
@@ -56,7 +56,7 @@ const ProjectsGallery = () => {
                     </Row>
                 )}
             </Container>
-        </div>
+        </>
     );
 }
 

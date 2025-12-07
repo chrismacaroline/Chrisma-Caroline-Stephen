@@ -4,10 +4,9 @@
     "name" : "THE PURSUIT OF HOBBYNESS",
     "github" : "https://github.com/chrisma89/The-Pursuit-of-Hobbyness",
     "deployed" : "https://chrisma89.github.io/The-Pursuit-of-Hobbyness/",
-    "image" : "/images/desk.jpg",  
+    "image" : "/images/POH - main.png",  
     "skill" : "API-JAVASCRIPT-JQUERY",
-    "description" : "The Pursuit of Hobbyness is an innovative web application designed to inspire users in discovering and embracing new hobbies.This platform serves as a digital incubator for dreams and aspirations through hobby exploration."
-},
+    "description" : "The Pursuit of Hobbyness is a web application, designed to help you find new hobbies to try."},
 {
   "id" :"8",
   "name" : "GUESS-CLICK-GAME",

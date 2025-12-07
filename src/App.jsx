@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import NavBar from './components/navbar';
 import HomeCard from './components/HomeCard';
@@ -6,12 +5,7 @@ import './projects.json';
 import ProjectsGallery from './components/ProjectGallery';
 import Contact from "./components/Contact"
 import Links from './components/LInks';
-import Details from './components/Details';
-import Header from './components/header';
-import About from './components/about';
-import Skills from './components/skills';
 import Footer from './components/footer';
-import UIUXProjects from './components/UIUXProjects';
 import "./main.css"
 import UIUXProjectsGallery from './components/UIUXProjectgallery';
 function App() {

@@ -29,7 +29,7 @@ function ProjectCard({
                   target="_blank"
                   style={{
                     backgroundColor: "#212529",
-                    color: "212529",
+                    color: "#f8f9fa",
                     margin: "5px",
                     padding: "10px",
                     textDecoration: "none",
@@ -50,7 +50,7 @@ function ProjectCard({
                   target="_blank"
                   style={{
                     backgroundColor: "#212529",
-                    color: "212529",
+                    color: "#f8f9fa",
                     margin: "5px",
                     padding: "10px",
                     textDecoration: "none",
