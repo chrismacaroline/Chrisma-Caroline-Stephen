@@ -5,8 +5,6 @@ import Col from 'react-bootstrap/Col';
 import Projects from "../Projects";
 import projectsData from "../../projects.json";
 import ProjectCard from '../ProjectCard';
-import { Button } from 'react-bootstrap';
-
 
 const ProjectsGallery = () => {
     const [selectedProject, setSelectedProject] = useState(null);
@@ -24,13 +22,7 @@ const ProjectsGallery = () => {
                     
                     <>   <div className="container-fluid d-flex flex-column justify-content-center  align-items-center">
                         
-                        <ProjectCard className ="col mb-2" project={selectedProject} id={selectedProject.id}
-                                    image={selectedProject.image}
-                                    name={selectedProject.name}
-                                    github={selectedProject.github}
-                                    skill={selectedProject.skill}
-                                    description={selectedProject.description}
-                                    deployed={selectedProject.deployed} />
+                        <ProjectCard className ="col mb-2" {...selectedProject} />
                                   
                                     
                                   <div className ="btn" style ={{ backgroundColor : "#ECECEC", color : "#212529", margin : "10px", padding : "10px", fontFamily : "roboto-medium", fontSize : "20px"}} onClick={() => setSelectedProject(null)}>BACK TO GALLERY</div>

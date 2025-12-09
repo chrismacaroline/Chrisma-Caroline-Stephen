@@ -221,15 +221,6 @@ a {
   }
 }
 
-.projectcard {  
-  /* container: fluid; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-
-}
-
 @media (max-width : 768px){
   .projectcard {
     display: inline;
