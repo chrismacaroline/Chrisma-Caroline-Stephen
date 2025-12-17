@@ -1,16 +1,20 @@
 [
  {
     "id" :"1",
-    "name" : "THE PURSUIT OF HOBBYNESS",
+    "name" : "The Pursuit of Hobbyness",
     "github" : "https://github.com/chrisma89/The-Pursuit-of-Hobbyness",
     "deployed" : "https://chrisma89.github.io/The-Pursuit-of-Hobbyness/",
     "image" : "/images/POH - main.png",  
     "skill" : "API-JAVASCRIPT-JQUERY",
-    "description" : "The Pursuit of Hobbyness is a web application, designed to help you find new hobbies.",
-    "titleOne": "Landing Page",
-    "subtitleOne": "The hobby exploration journey begins here, with a clear call-to-action and a concise introduction.",
-    "descriptionOne" : "Clicking the CTA button shows six categories of hobbies to explore",
-    "imageOne":"/images/POH-Landing Page.svg"
+    "description" : "A web application that helps you find new hobbies.",
+    "titleOne": "Application's landing page",
+    "subtitleOne": "The hobby exploration begins here, with minimal content to skim through and get started. It contains the name of the application, an engaging introduction and a single, prominent call-to-action button.",
+    "descriptionOne" : "Clicking the 'FIND NEW HOBBY' button will reveal 6 categories of hobbies to explore.",
+    "imageOne":"/images/POH-Landing Page.svg",
+     "titleTwo": "Choose a category",
+    "subtitleTwo": "You can choose any of the six categories displayed on this page. The categories are General, Sports and Outdoors, Education, Collection, Competition and Observation.",
+    "descriptionTwo" : "Each category is styled as a button. When a category is clicked, the application makes an API call to suggest a random hobby. The REST API in use is: https://api-ninjas.com/api/hobbies",
+    "imageTwo":"/images/Category.svg"
  },
 {
   "id" :"8",
