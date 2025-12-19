@@ -14,7 +14,18 @@
      "titleTwo": "Choose a category",
     "subtitleTwo": "You can choose any of the six categories displayed on this page. The categories are General, Sports and Outdoors, Education, Collection, Competition and Observation.",
     "descriptionTwo" : "Each category is styled as a button. When a category is clicked, the application makes an API call to suggest a random hobby. The REST API in use is: https://api-ninjas.com/api/hobbies",
-    "imageTwo":"/images/Category.svg"
+    "imageTwo":"/images/category 1.svg",
+     "titleThree": "Category-based hobby suggestion",
+    "subtitleThree": "The application suggests a hobby based on the category chosen in the previous screen. Click “What is” to read about the hobby on Wikipedia. Use the other buttons to restart your exploration from the beginning or from category selection.",
+    "descriptionThree" : "If you like the hobby, you can pursue it by clicking the 'PURSUE HOBBY' button.",
+    "imageThree":"/images/Suggestion 1.svg",
+    "titleFour": "Category-based hobby suggestion",
+    "subtitleFour": "The application suggests a hobby based on the category chosen in the previous screen. Click “What is” to read about the hobby on Wikipedia. Use the other buttons to restart your exploration from the beginning or from category selection.",
+    "descriptionFour" : "If you like the hobby, you can pursue it by clicking the 'PURSUE HOBBY' button.",
+    "imageFour":"/images/Videos.png",
+    "video": "/images/Screen Recording 2025-12-19 at 22.08.08.mov",
+    "videoTitle": "Application Demo",
+    "videoSubtitle": "Discover how the app helps you find new hobbies"
  },
 {
   "id" :"8",
