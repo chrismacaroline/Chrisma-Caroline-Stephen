@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 
 import Card from "react-bootstrap/Card";
-import { Container, Row, Col } from "react-bootstrap";
+import {  Button } from "react-bootstrap";
 import "../../main.css";
 
 function ProjectCard(props) {
@@ -13,8 +13,8 @@ function ProjectCard(props) {
         md={8}
         lg={6}
         xl={4}
-        className="container-fluid display-flex justify-content-center p-4 mb-4 border-0 bg-transparent shadow"
-        style={{ width: "95%" }}
+        className="container-fluid display-flex justify-content-center p-4 mb-4 border-1 bg-transparent"
+        style={{ width: "95%",boxShadow: "0 2px 6px rgba(0, 0, 0, 0.06)"}}
       >
         <Card.Body className="container-fluid display-flex justify-content-center">
           <Card.Title
@@ -46,8 +46,8 @@ function ProjectCard(props) {
             className="container-fluid"
             style={{
               minHeight: "24rem",
-              padding: "2rem",
-              paddingBottom: "6rem",
+              paddingTop: "2rem",
+              paddingBottom: "4rem",
             }}
           >
             <div className="row align-items-center justify-content-center">
@@ -94,7 +94,7 @@ function ProjectCard(props) {
             style={{ minHeight: "28rem", padding: "2rem" }}
           >
             <div className="row align-items-start">
-                <div className="col-12 col-md-6 d-flex justify-content-end">
+                <div className="col-12 col-md-6 d-flex justify-content-end" style={{ paddingBottom: "0.5rem" }}>
                 <img
                   src={props.imageOne}
                   className="img-fluid"
@@ -134,7 +134,7 @@ function ProjectCard(props) {
             style={{ minHeight: "28rem", padding: "2rem" }}
           >
             <div className="row align-items-start">
-               <div className="col-12 col-md-6 d-flex justify-content-end">
+               <div className="col-12 col-md-6 d-flex justify-content-end"style={{ paddingBottom: "0.5rem" }}>
                 <img
                   src={props.imageTwo}
                   className="img-fluid"
@@ -175,7 +175,7 @@ function ProjectCard(props) {
             style={{ minHeight: "28rem", padding: "2rem" }}
           >
             <div className="row align-items-start">
-               <div className="col-12 col-md-6 d-flex justify-content-end">
+               <div className="col-12 col-md-6 d-flex justify-content-end" style={{ paddingBottom: "0.5rem" }}>
                 <img
                   src={props.imageThree}
                   style={{ transition: "transform 0.3s ease" }}
@@ -214,7 +214,7 @@ function ProjectCard(props) {
             style={{ minHeight: "28rem", padding: "2rem" }}
           >
             <div className="row align-items-start">
-              <div className="col-12 col-md-6 d-flex justify-content-end">
+              <div className="col-12 col-md-6 d-flex justify-content-end" style={{ paddingBottom: "0.5rem" }}>
                 <video
                 controls
                 autoPlay
@@ -257,7 +257,7 @@ function ProjectCard(props) {
             style={{ minHeight: "28rem", padding: "2rem" }}
           >
             <div className="row align-items-start">
-              <div className="col-12 col-md-6 d-flex justify-content-end">
+              <div className="col-12 col-md-6 d-flex justify-content-end" style={{ paddingBottom: "0.5rem" }}>
                 <img
                   src={props.imageFour}
                   className="img-fluid"
@@ -299,7 +299,7 @@ function ProjectCard(props) {
             style={{ minHeight: "28rem", padding: "2rem" }}
           >
             <div className="row align-items-start">
-              <div className="col-12 col-md-6 d-flex justify-content-end">
+              <div className="col-12 col-md-6 d-flex justify-content-end" style={{ paddingBottom: "0.5rem" }}>
                 <img
                   src={props.imageFive}
                   style={{ transition: "transform 0.3s ease" }}
@@ -333,6 +333,56 @@ function ProjectCard(props) {
               </div>
             </div>
           </div>
+
+          {/* Call to action */}
+
+           <div className="container-fluid d-flex flex-column flex-sm-row justify-content-center">
+
+                <a
+                  href={props.github}
+                  target="_blank"
+                  style={{
+                    color: "#212529",
+                    backgroundColor: "#f8f9fa",
+                    margin: "5px",
+                    padding: "0.6rem",
+                    textDecoration: "none",
+                    fontFamily: "roboto-medium",
+                    // minWidth: "150px",
+                    minHeight: "50px",
+                    minWidth: "16rem",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    fontSize : "1.2rem"
+                  }}
+                  className=" btn my-1 rounded-5"
+                >
+                  GitHub
+                </a>
+                <a
+                  href={props.deployed}
+                  target="_blank"
+                  style={{
+                    backgroundColor: "#212529",
+                    color: "#f8f9fa",
+                    margin: "5px",
+                    padding: "0.6rem",
+                    textDecoration: "none",
+                    fontFamily: "roboto-medium",
+                    // minWidth: "150px",
+                    minHeight: "50px",
+                    minWidth: "16rem",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    fontSize : "1.2rem"
+                  }}
+                  className=" btn my-1 rounded-5"
+                >
+                  Application
+                </a>
+              </div>
         </Card.Body>
       </Card>
     </>

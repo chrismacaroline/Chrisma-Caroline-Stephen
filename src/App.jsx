@@ -7,16 +7,18 @@ import Contact from "./components/Contact"
 import Links from './components/LInks';
 import Footer from './components/footer';
 import "./main.css"
+import ScrollToTop from "./ScrollToTop";
 import UIUXProjectsGallery from './components/UIUXProjectgallery';
 function App() {
   return (
     <Router>
+      <ScrollToTop />
+      
       {/* basename={`/Chrisma-Caroline-Stephen`} */}
       <div>
         {/* <Header />  */}
         <NavBar />
         {/* <About /> */}
-        
         <Routes>
           <Route path="/" element={<HomeCard />} />
           <Route path="/projects" element={<ProjectsGallery />} />
