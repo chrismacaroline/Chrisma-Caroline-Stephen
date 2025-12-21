@@ -39,10 +39,10 @@ function NavBar() {
             }}
             to="/projects"
           >
-            Front-End Projects
+            Front-End & UX Projects
           </Link>
 
-          <Link
+          {/* <Link
             id= "nav-link"
             className={`custom-nav-link ${location.pathname === "/uiuxprojects" ? "active" : ""}`}
             style={{
@@ -53,7 +53,7 @@ function NavBar() {
             to="/uiuxprojects"
           >
             UI/UX Projects
-          </Link>
+          </Link> */}
 
           <Link
             id= "nav-link"
