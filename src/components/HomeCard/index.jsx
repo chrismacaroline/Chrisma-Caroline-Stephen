@@ -1,12 +1,12 @@
 
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Card } from "react-bootstrap";
 import "./style.css";
 
 function HomeCard() {
   return (
     <>
       <Container fluid
-        className="d-flex flex-column min-vh-100 justify-content-center align-items-center"
+        className="d-flex flex-column min-vh-100 justify-content-left align-items-left"
         style={{
           // fontFamily: "roboto-regular-italic",
           // width: "100%",
@@ -17,15 +17,15 @@ function HomeCard() {
           backgroundColor : "#f8f9fa"
         }}
       >
-        <Row
+         <Row
           className="justify-content-start homecard-row"
           style={{
             fontFamily: "roboto-italic",
-            fontSize: "4rem",
+            fontSize: "2.3rem",
             // padding: "10px",
             paddingTop: "30px",
           }}
-        >Hello, I'm Chrisma.
+        >Chrisma's Portfolio
           {/* <Col>Vanakkam! Swāgatham! Welcome!
 </Col> */}
         </Row>
@@ -43,21 +43,20 @@ function HomeCard() {
           className="justify-content-start homecard-row"
           style={{
             fontFamily: "roboto-regular-italic",
-            fontSize: "2.5rem",
-            paddingTop: "4rem",
+            fontSize: "1.7rem",
+            paddingTop: "2rem",
           }}
-        >I’m a front-end web developer and UI/UX designer. I create user-centered design in Figma and make them functional with JavaScript and React.
-        
+        >Chrisma is a product-oriented front-end developer combining UX thinking with coding and implementation skills to move features from concept to release. She is experienced in real-time messaging products and in creating brand-consistent, user-friendly interfaces for desktop and mobile applications.
         </Row>
-        <Row
+        {/* <Row
           className="justify-content-start homecard-row"
           style={{
             fontFamily: "roboto-regular-italic",
             fontSize: "2.5rem",
-            paddingTop: "4rem",
+            paddingTop: "2rem",
           }}
         >Connect with me on LinkedIn and let’s collaborate.
-        </Row>
+        </Row> */}
         <Row
           className="homecard-row"
           style={{

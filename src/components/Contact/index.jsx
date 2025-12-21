@@ -1,7 +1,5 @@
 import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
 import "./style.css";
-import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import Links from "../LInks";
@@ -50,7 +48,7 @@ const Contact = () => {
           <p
            
             style={{
-              color: "212529",
+              color: "#212529",
               fontSize: "1.5rem",
               fontFamily: "roboto-medium",
               textAlign: "center",
@@ -61,7 +59,7 @@ const Contact = () => {
           <p
            
             style={{
-              color: "212529",
+              color: "#212529",
               fontSize: "1.5rem",
               fontFamily: "roboto-medium",
               textAlign: "center",
@@ -88,8 +86,8 @@ const Contact = () => {
                   marginTop: "30px",
                   marginBottom: "30px",
                   fontSize: "20px",
-                  backgroundColor: "212529",
-                  color: "#474787",
+                  backgroundColor: "#212529",
+                  color: "#212529",
                 }}
               >
                 <FontAwesomeIcon icon={faDownload} /> My Resume

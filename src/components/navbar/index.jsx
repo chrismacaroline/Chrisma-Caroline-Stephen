@@ -1,5 +1,3 @@
-import Container from "react-bootstrap/Container";
-import React, { useState } from "react";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { Link, useLocation } from "react-router-dom";
@@ -11,17 +9,12 @@ function NavBar() {
   // const [expanded, setExpanded] = useState(false);
   const location = useLocation ();
   return (
-    <Navbar expand="lg" className="container-fluid navbarmain">
-  <Container className="p-2">
-
+    <Navbar expand="lg" className="container-fluid navbarmain px-5">
     <Navbar.Toggle aria-controls="basic-navbar-nav" className="custom-toggler">
-      <FontAwesomeIcon icon={faBars} style={{ color: "#212529" }} />
+    <FontAwesomeIcon icon={faBars} style={{ color: "#212529" }} />
     </Navbar.Toggle>
-
     <Navbar.Collapse id="basic-navbar-nav" className="custom-toggler">
-      <Nav className="w-100 d-flex align-items-center">
-
-        {/* LEFT LINK */}
+    <Nav className="w-full d-flex align-items-center">
         <Link
           id= "nav-link"
           className={`me-auto custom-nav-link ${location.pathname === "/" ? "active" : ""}`}
@@ -46,10 +39,10 @@ function NavBar() {
             }}
             to="/projects"
           >
-            Front-End Projects
+            Front-End & UX Projects
           </Link>
 
-          <Link
+          {/* <Link
             id= "nav-link"
             className={`custom-nav-link ${location.pathname === "/uiuxprojects" ? "active" : ""}`}
             style={{
@@ -60,7 +53,7 @@ function NavBar() {
             to="/uiuxprojects"
           >
             UI/UX Projects
-          </Link>
+          </Link> */}
 
           <Link
             id= "nav-link"
@@ -77,8 +70,6 @@ function NavBar() {
         </div>
       </Nav>
     </Navbar.Collapse>
-
-  </Container>
 </Navbar>
 
   );
