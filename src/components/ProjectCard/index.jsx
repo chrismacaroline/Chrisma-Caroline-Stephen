@@ -23,9 +23,9 @@ function ProjectCard(props) {
           >
             {props.name}
           </Card.Title>
-          <Card.Subtitle style={{ fontSize: "1.2rem", paddingBottom: "0.5rem" }} className="text-left">
+          <Card.Text style={{ fontSize: "1.2rem", paddingBottom: "0.5rem" }} className="text-left">
             {props.description}
-          </Card.Subtitle>
+          </Card.Text>
           <Card.Img
             variant="top"
             src={props.imageMain}
