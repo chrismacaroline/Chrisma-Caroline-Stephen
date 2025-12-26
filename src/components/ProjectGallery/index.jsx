@@ -1,30 +1,32 @@
-import React, { useState, useEffect } from "react";
+// import React, { useState, useEffect } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Projects from "../Projects";
 import projectsData from "../../projects.json";
-import ProjectCard from "../ProjectCard";
+// import ProjectCard from "../ProjectCard";
+import { useNavigate } from "react-router-dom";
+
 
 const ProjectsGallery = () => {
-  
+  const navigate = useNavigate();
 
-  const [selectedProject, setSelectedProject] = useState(null);
+  // const [selectedProject, setSelectedProject] = useState(null);
 
-  const selectProject = (projectId) => {
-    const chosenProject = projectsData.find(
-      (project) => project.id === projectId
-    );
-    setSelectedProject(chosenProject);
-  };
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [selectedProject]);
+  // const selectProject = (projectId) => {
+  //   const chosenProject = projectsData.find(
+  //     (project) => project.id === projectId
+  //   );
+  //   setSelectedProject(chosenProject);
+  // };
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, [selectedProject]);
 
   return (
     <>
       <Container className="container-fluid flex flex-column min-vh-100 align-items-start justify-content-start">
-        {selectedProject ? (
+        {/* {selectedProject ? (
           <>
             {" "}
             <div className="container-fluid d-flex flex-column justify-content-center  align-items-center">
@@ -46,7 +48,7 @@ const ProjectsGallery = () => {
               </div>
             </div>
           </>
-        ) : (
+        ) :  */}
           <Row className="container-fluid d-flex align-items-start">
             {projectsData.map((project) => (
               <Col key={project.id} sm={12} md={12} lg={12}>
@@ -58,12 +60,13 @@ const ProjectsGallery = () => {
                   name={project.name}
                   github={project.github}
                   deployed={project.deployed}
-                  selectProject={() => selectProject(project.id)}
+                  onClick={() => console.log(project)}
+                  // selectProject={() => selectProject(project.id)}
                 />
               </Col>
             ))}
           </Row>
-        )}
+        {/* } */}
       </Container>
     </>
   );
