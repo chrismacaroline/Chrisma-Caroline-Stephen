@@ -10,11 +10,11 @@ import { useNavigate } from "react-router-dom";
 function Projects ({id,image,name, description}) {
     const navigate = useNavigate();
   return (
-    <Card className ="container-fluid d-flex flex-column align-items-start justify-content-center py-5"style={{ width: '90%'}}>
-        <Card.Title className="flex-row justify-content-start align-items-start" style={{fontSize: "25px", padding: "10px", color : "#212529", fontFamily : "roboto-medium"}}>{name}</Card.Title>
-        <Card.Subtitle className="flex-row justify-content-start align-items-start" style={{fontSize: "25px", padding: "10px", color : "#212529", fontFamily : "roboto-medium"}}>{description}</Card.Subtitle>
-        <Card.Img variant="top" src={image} className='mx-auto d-block img-container flex-column d-flex justify-content-center' style = {{ padding: "2rem", width : "75%", height : "75%"}}/>
-        <Button id={id}  variant="light" className='mx-auto d-block rounded-3'style ={{backgroundColor: "#212529" , color : "#f8f9fa", margin : "5px", fontFamily : "roboto-medium", padding: "0.8rem", paddingLeft: "6rem", paddingRight: "6rem"}}  onClick={() => navigate(`/projects/${id}`)}>
+    <Card className ="container-fluid d-flex flex-column h-100 align-items-start justify-content-center" style={{boxShadow:  "0 2px 8px rgba(13, 13, 13, 0.2)"}}>
+        <Card.Title className="flex-row justify-content-start align-items-start fs-3 fs-md-3 fs-lg-3 px-lg-3 px-1 py-1 fw-normal">{name}</Card.Title>
+        <Card.Subtitle className="flex-row justify-content-start align-items-start fs-4 fs-md-4 fs-lg-4 px-lg-3 px-1 py-1 fw-light">{description}</Card.Subtitle>
+        <Card.Img variant="top" src={image} className='mx-auto d-block img-container flex-column d-flex justify-content-center fs-4 fs-md-3 fs-lg-1 px-lg-3 px-1 py-1 fw-medium'/>
+        <Button id={id}  variant="light" className='mx-auto mt-auto d-block rounded-3'style ={{backgroundColor: "#212529" , color : "#f8f9fa", margin : "5px", fontFamily : "roboto-medium", padding: "0.8rem", paddingLeft: "6rem", paddingRight: "6rem"}}  onClick={() => navigate(`/projects/${id}`)}>
         VIEW PROJECT
       </Button>
     </Card>
