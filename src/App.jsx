@@ -27,6 +27,7 @@ function App() {
           <Route path="/projects" element={<ProjectsGallery/>} />
           {/* <Route path="/projects" element={<Projects />} /> */}
           <Route path="/projects/:projectId" element={<ProjectCard />} />
+          <Route path="/projects/:cqi" element={<POH />} />
           {/* <Route path="/projectdetails" element={<Details  />} /> */}
           {/* <Route path="/project/:projectId" element={<ProjectsGallery />} /> */}
           <Route path="/links" element={<Links />} />
