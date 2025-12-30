@@ -1,13 +1,13 @@
 [
  {
     "id" :"1",
-    "name" : "The Pursuit of Hobbyness",
+    "name" : "The Pursuit of Hobbyness - A web app for finding hobbies.",
     "github" : "https://github.com/chrismacaroline/The-Pursuit-of-Hobbyness",
     "deployed" : "https://chrismacaroline.github.io/The-Pursuit-of-Hobbyness/",
     "image" : "/images/LandingPage.svg",  
      "imageMain" : "/images/POH - main.png",  
     "skill" : "API-JAVASCRIPT-JQUERY",
-    "description" : "A web application to discover new hobbies through guided category-based suggestions and external APIs.",
+    "description" : "Discovering new hobbies can feel overwhelming due to unstructured information and unclear starting points. A guided, category-based web application was designed and built using JavaScript and multiple REST APIs to progressively surface relevant hobbies, videos, and reference content with minimal user effort. The experience reduces decision fatigue, provides clear next steps, and enables users to return to previously explored hobbies through persistent client-side storage, resulting in a smoother and more engaging exploration flow.",
     "titleOne": "Application Landing Page: Start Hobby Exploration Here",
     "subtitleOne": "The page is styled minimally in design and content, with a single prominent call-to-action button.",
     "descriptionOne" : "Clicking the 'FIND NEW HOBBY' button will reveal six categories of hobbies to explore.",
@@ -38,13 +38,10 @@
     "pagesIntro" : "Screens, Functionality and Core User Experience"
  },
 {
-  "id" :"8",
-  "name" : "GUESS-CLICK-GAME",
-  "github" : "https://github.com/chrisma89/Guess-Click-Game",
-  "deployed" : "https://guessclickgame.netlify.app/",
-  "image" : "../../images/desk7.jpg",
-  "skill" : "REACT-JAVASCRIPT-NODE",
-  "description" : "This captivating game leverages the power of React to create a dynamic and responsive user experience. The seamless score updates, randomized image arrangements, and top score tracking are all dynamically managed through React's efficient use of hooks, props, and components"
+  "id" :"cqi",
+  "name" : "WebRTC Connection Quality Indicator (P2P Calls)",
+  "image" : "../../images/Indicators.svg",
+  "description" : "In peer-to-peer calls, the absence of visual feedback around network quality often left users confused by distorted audio or dropped words. A WebRTC connection quality indicator was introduced to surface real-time network status directly within the call interface. By clearly signalling when call issues were network-related, this feature set clearer expectations, reduced user confusion, and improved overall confidence and experience during calls."
 }
 
 ]

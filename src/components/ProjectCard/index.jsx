@@ -3,8 +3,15 @@
 import Card from "react-bootstrap/Card";
 import {  Button } from "react-bootstrap";
 import "../../main.css";
+import projects from "../../projects.json";
+import { useParams } from "react-router-dom";
 
-function ProjectCard(props) {
+function ProjectCard() {
+ const { projectId } = useParams();
+    const project = projects.find(
+    (p) => p.id === projectId
+  );
+   
   return (
     <>
       <Card
@@ -21,14 +28,14 @@ function ProjectCard(props) {
             style={{ fontSize: "2rem", paddingBottom: "0.5rem" }}
             className="text-left"
           >
-            {props.name}
+            {project.name}
           </Card.Title>
-          <Card.Subtitle style={{ fontSize: "1.2rem", paddingBottom: "0.5rem" }} className="text-left">
-            {props.description}
+        <Card.Subtitle style={{ fontSize: "1.2rem", paddingBottom: "0.5rem" }} className="text-left">
+            {project.description}
           </Card.Subtitle>
           <Card.Img
             variant="top"
-            src={props.imageMain}
+            src={project.imageMain}
             className="container-fluid d-flex img-fluid justify-content-center"
             style={{
               maxWidth: "80%",
@@ -54,12 +61,12 @@ function ProjectCard(props) {
               <Card.Title
                 style={{ fontSize: "1.8rem", paddingBottom: "0.5rem" }}
               >
-                {props.videoTitle}
+                {project.videoTitle}
               </Card.Title>
               <Card.Text
                 style={{ fontSize: "1.2rem", paddingBottom: "0.5rem" }}
               >
-                {props.videoSubtitle}
+                {project.videoSubtitle}
               </Card.Text>
               <div className="d-flex align-items-center justify-content-center" style={{
                   boxShadow: "0 2px 5px rgba(255, 255, 255, 0.35)",
@@ -79,13 +86,13 @@ function ProjectCard(props) {
                   objectFit: "cover",
                 }}
               >
-                <source src={props.video} type="video/mp4" />
+                <source src={project.video} type="video/mp4" />
               </video>
               </div>
             </div>
           </div>
           <Card.Title style={{ fontSize: "1.8rem", padding: "01rem" }} className="text-left">
-            {props.pagesIntro}
+            {project.pagesIntro}
           </Card.Title>
 
           {/* Section One */}
@@ -96,7 +103,7 @@ function ProjectCard(props) {
             <div className="row align-items-start">
                 <div className="col-12 col-md-6 d-flex justify-content-end" style={{ paddingBottom: "0.5rem" }}>
                 <img
-                  src={props.imageOne}
+                  src={project.imageOne}
                   className="img-fluid"
                   style={{ transition: "transform 0.3s ease" }}
                   // style={{ maxWidth: "60%" }}
@@ -113,17 +120,17 @@ function ProjectCard(props) {
                 <Card.Title
                   style={{ fontSize: "1.5rem", paddingBottom: "0.5rem" }}
                 >
-                  {props.titleOne}
+                  {project.titleOne}
                 </Card.Title>
                 <Card.Text
                   style={{ fontSize: "1.2rem", paddingBottom: "0.5rem" }}
                 >
-                  {props.subtitleOne}
+                  {project.subtitleOne}
                 </Card.Text>
                 <Card.Text
                   style={{ fontSize: "1.2rem", paddingBottom: "0.5rem" }}
                 >
-                  {props.descriptionOne}
+                  {project.descriptionOne}
                 </Card.Text>
               </div>
             </div>
@@ -136,7 +143,7 @@ function ProjectCard(props) {
             <div className="row align-items-start">
                <div className="col-12 col-md-6 d-flex justify-content-end"style={{ paddingBottom: "0.5rem" }}>
                 <img
-                  src={props.imageTwo}
+                  src={project.imageTwo}
                   className="img-fluid"
                   style={{ transition: "transform 0.3s ease" }}
                   // style={{ maxWidth: "60%" }}
@@ -153,17 +160,17 @@ function ProjectCard(props) {
                 <Card.Title
                   style={{ fontSize: "1.5rem", paddingBottom: "0.5rem" }}
                 >
-                  {props.titleTwo}
+                  {project.titleTwo}
                 </Card.Title>
                 <Card.Text
                   style={{ fontSize: "1.2rem", paddingBottom: "0.5rem" }}
                 >
-                  {props.subtitleTwo}
+                  {project.subtitleTwo}
                 </Card.Text>
                 <Card.Text
                   style={{ fontSize: "1.2rem", paddingBottom: "0.5rem" }}
                 >
-                  {props.descriptionTwo}
+                  {project.descriptionTwo}
                 </Card.Text>
               </div>
             </div>
@@ -177,7 +184,7 @@ function ProjectCard(props) {
             <div className="row align-items-start">
                <div className="col-12 col-md-6 d-flex justify-content-end" style={{ paddingBottom: "0.5rem" }}>
                 <img
-                  src={props.imageThree}
+                  src={project.imageThree}
                   style={{ transition: "transform 0.3s ease" }}
                   className="img-fluid"
                   alt=""
@@ -193,17 +200,17 @@ function ProjectCard(props) {
                 <Card.Title
                   style={{ fontSize: "1.5rem", paddingBottom: "0.5rem" }}
                 >
-                  {props.titleThree}
+                  {project.titleThree}
                 </Card.Title>
                 <Card.Text
                   style={{ fontSize: "1.2rem", paddingBottom: "0.5rem" }}
                 >
-                  {props.subtitleThree}
+                  {project.subtitleThree}
                 </Card.Text>
                 <Card.Text
                   style={{ fontSize: "1.2rem", paddingBottom: "0.5rem" }}
                 >
-                  {props.descriptionThree}
+                  {project.descriptionThree}
                 </Card.Text>
               </div>
             </div>
@@ -228,24 +235,24 @@ function ProjectCard(props) {
                   objectFit: "cover",
                 }}
               >
-                <source src={props.imageSix} type="video/mp4" />
+                <source src={project.imageSix} type="video/mp4" />
               </video>
               </div>
               <div className="col-12 col-md-6 text-start">
                 <Card.Title
                   style={{ fontSize: "1.5rem", paddingBottom: "0.5rem" }}
                 >
-                  {props.titleSix}
+                  {project.titleSix}
                 </Card.Title>
                 <Card.Text
                   style={{ fontSize: "1.2rem", paddingBottom: "0.5rem" }}
                 >
-                  {props.subtitleSix}
+                  {project.subtitleSix}
                 </Card.Text>
                 <Card.Text
                   style={{ fontSize: "1.2rem", paddingBottom: "0.5rem" }}
                 >
-                  {props.descriptionSix}
+                  {project.descriptionSix}
                 </Card.Text>
               </div>
             </div>
@@ -259,7 +266,7 @@ function ProjectCard(props) {
             <div className="row align-items-start">
               <div className="col-12 col-md-6 d-flex justify-content-end" style={{ paddingBottom: "0.5rem" }}>
                 <img
-                  src={props.imageFour}
+                  src={project.imageFour}
                   className="img-fluid"
                   style={{ transition: "transform 0.3s ease" }}
                   // style={{ maxWidth: "60%" }}
@@ -276,17 +283,17 @@ function ProjectCard(props) {
                 <Card.Title
                   style={{ fontSize: "1.5rem", paddingBottom: "0.5rem" }}
                 >
-                  {props.titleFour}
+                  {project.titleFour}
                 </Card.Title>
                 <Card.Text
                   style={{ fontSize: "1.2rem", paddingBottom: "0.5rem" }}
                 >
-                  {props.subtitleFour}
+                  {project.subtitleFour}
                 </Card.Text>
                 <Card.Text
                   style={{ fontSize: "1.2rem", paddingBottom: "0.5rem" }}
                 >
-                  {props.descriptionFour}
+                  {project.descriptionFour}
                 </Card.Text>
               </div>
             </div>
@@ -301,7 +308,7 @@ function ProjectCard(props) {
             <div className="row align-items-start">
               <div className="col-12 col-md-6 d-flex justify-content-end" style={{ paddingBottom: "0.5rem" }}>
                 <img
-                  src={props.imageFive}
+                  src={project.imageFive}
                   style={{ transition: "transform 0.3s ease" }}
                   className="img-fluid"
                   // style={{ maxWidth: "60%" }}
@@ -318,17 +325,17 @@ function ProjectCard(props) {
                 <Card.Title
                   style={{ fontSize: "1.5rem", paddingBottom: "0.5rem" }}
                 >
-                  {props.titleFive}
+                  {project.titleFive}
                 </Card.Title>
                 <Card.Text
                   style={{ fontSize: "1.2rem", paddingBottom: "0.5rem" }}
                 >
-                  {props.subtitleFive}
+                  {project.subtitleFive}
                 </Card.Text>
                 <Card.Text
                   style={{ fontSize: "1.2rem", paddingBottom: "0.5rem" }}
                 >
-                  {props.descriptionFive}
+                  {project.descriptionFive}
                 </Card.Text>
               </div>
             </div>
@@ -339,7 +346,7 @@ function ProjectCard(props) {
            <div className="container-fluid d-flex flex-column flex-sm-row justify-content-center">
 
                 <a
-                  href={props.github}
+                  href={project.github}
                   target="_blank"
                   style={{
                     color: "#212529",
@@ -361,7 +368,7 @@ function ProjectCard(props) {
                   GitHub
                 </a>
                 <a
-                  href={props.deployed}
+                  href={project.deployed}
                   target="_blank"
                   style={{
                     backgroundColor: "#212529",
