@@ -246,3 +246,6 @@ a {
 
   align-items: center;
 }
+.body {
+  font-family: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
