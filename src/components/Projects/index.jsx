@@ -10,8 +10,7 @@ import { useNavigate } from "react-router-dom";
 function Projects ({id,image,name, description}) {
     const navigate = useNavigate();
   return (
-    <Card className ="container-fluid d-flex flex-column h-100 px-0 align-items-start justify-content-center" style={{boxShadow:  "0 2px 8px rgba(13, 13, 13, 0.2)", minHeight: "clamp(420px, 30vw, 460px)"}}>
-        <Card.Title className="flex-row justify-content-start align-items-start fs-4 fs-md-4 fs-lg-4 px-lg-2 px-2 py-3 fw-medium">{name}</Card.Title>
+    <Card className ="container-fluid d-flex flex-column h-100 px-1 py-0 align-items-start justify-content-center" style={{ backgroundColor: "#eef2f6ff", boxShadow:  "0 2px 8px rgba(13, 13, 13, 0.2)", minHeight: "clamp(420px, 30vw, 460px)"}}>
           
   <div
     className="w-100"
@@ -27,7 +26,8 @@ function Projects ({id,image,name, description}) {
     objectFit: "fit"  }}
     />
   </div>
-          <Card.Subtitle className="flex-row justify-content-start align-items-start roboto-light fs-4 fs-md-4 fs-lg-4 px-lg-4 px-2 pt-5 pb-2 fw-light"  style ={{ fontFamily: "roboto-italic"}}>{description}</Card.Subtitle>
+          <Card.Title className="flex-row justify-content-start align-items-start fs-4 fs-md-4 fs-lg-4 px-lg-2 px-2 py-3 fw-medium">{name}</Card.Title>
+          <Card.Subtitle className="flex-row justify-content-start align-items-start roboto-light fs-4 fs-md-4 fs-lg-4 px-lg-2 px-2 pt-1 pb-1 fw-light"  style ={{ fontFamily: "roboto-italic"}}>{description}</Card.Subtitle>
         <div className="d-flex w-100 mt-auto">
         <Button id={id}  variant="light" className='ms-auto rounded-3'style ={{backgroundColor: "#212529"}}  onClick={() => {if(id === 'cqi') {navigate(`/projects/cqi`)} else {navigate(`/projects/${id}`)}}}>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24" width="24" fill="#f8f9fa">
