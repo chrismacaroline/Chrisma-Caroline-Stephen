@@ -5,10 +5,18 @@ h3 {
 }
 
 .icon svg {
-  color: #ECECEC ; 
+  color:#212529 ; 
   font-size: 4rem; 
   padding: 3rem;
   align-items: center;
-  
-  
+}
+.icon {
+  color: #212529;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.icon:hover,
+.icon:focus {
+  color: #0d6efd;
+  transform: scale(1.1);
 }
