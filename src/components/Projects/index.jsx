@@ -12,11 +12,12 @@ function Projects ({id,image,name, description}) {
 
   return (
     <Card
-  className="d-flex flex-column h-100 border-0 w-100"
+  className="d-flex flex-column h-100 w-100 border border-1"
   style={{
-    backgroundColor: "#f8f9fa",
+    // backgroundColor: "#f8f9fa",
     boxShadow: "0 2px 6px rgba(0, 0, 0, 0.08)",
-    borderRadius: "12px",
+    borderRadius: "4px",
+    borderColor: "#212529"
   }}
 >
   {/* Image */}
@@ -27,7 +28,7 @@ function Projects ({id,image,name, description}) {
     overflow: "hidden",
     borderTopLeftRadius: "12px",
     borderTopRightRadius: "12px",
-    backgroundColor: "#f1f3f5",
+    // backgroundColor: "#f1f3f5",
     }}
   >
     <img
