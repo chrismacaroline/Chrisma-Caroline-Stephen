@@ -72,12 +72,14 @@ function CQI() {
         <section className="py-4">
           <Card.Title className="fs-2 mb-3">The Problem Statement</Card.Title>
           <Card.Text className="fs-5 text-muted">
-            As shown below, the call screen lacked any visual indicators to signal changes in connection quality.
-    The existing call screen was reviewed to identify user pain points and define a clear, solvable problem.
+            As shown below, the call screen lacked any visual indicators to
+            signal changes in connection quality. The existing call screen was
+            reviewed to identify user pain points and define a clear, solvable
+            problem.
           </Card.Text>
           <div className="col-12 col-md-6 d-flex justify-content-center w-100 pb-5">
             <img
-              src="../images/cqioriginal.svg"
+              src="../images/mainmockup.png"
               alt="image of a call screen"
               className="img-fluid w-100 rounded-3"
               style={{
@@ -93,17 +95,36 @@ function CQI() {
               }
             />
           </div>
-
+          <Card.Text className="fs-5 text-muted">
+            Key problems and questions considered:
+          </Card.Text>
           <ul className="fs-5 text-muted ps-3">
- 
-  <li className="mb-2">
-    <strong>Primary issue: Lack of visual feedback</strong> Participants were shown as “connected” even when network quality degraded, making it difficult for users to understand the cause of call issues. This led to confusion and misplaced blame, particularly in group calls with multiple peer connections.
-  </li>
-  <li className="mb-2">
-    <strong>Resulting impact:</strong> Poor or unstable connections caused distorted audio and dropped words, directly degrading the call experience.
-  </li>
-</ul>
-
+            <li className="mb-2">
+              What if the connection for a participant is weak or poor? How is the lack of the information affecting user experience?
+            </li>
+            <li className="mb-2">
+              What if you can’t hear a participant clearly and the reason is not
+              obvious to the user?
+            </li>
+            <li className="mb-2">
+             What if a participant suddenly dropped out due to loss of connection but there were no warnings to the other participants?
+            </li>
+          </ul>
+ <Card.Text className="fs-5 text-muted">
+            The problem was then clearly identified and stated as:
+          </Card.Text>
+          <ul className="fs-5 text-muted ps-3">
+            <li className="mb-2">
+              <strong>Primary issue: Lack of visual feedback</strong>{" "}
+              Participants were shown as “connected” even when network quality
+              degraded, making it difficult for users to understand the cause of
+              call issues such as dropped words, poor audio and lost connections. This led to confusion and misplaced blame,
+              particularly in group calls with multiple peer connections.
+            </li>
+            <li className="mb-2">
+              <strong>Resulting impact:</strong> Call experience was negatively impacted, leading to user frustration and decrease trust in the application. 
+            </li>
+          </ul>
         </section>
 
         {/* Research */}

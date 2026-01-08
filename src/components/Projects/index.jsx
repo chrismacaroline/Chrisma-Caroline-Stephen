@@ -35,7 +35,11 @@ function Projects ({id,image,name, description}) {
       src={image}
     alt={name}
     className="w-100 h-100"
-    style={{ objectFit: "contain" }}
+    style={{  width: "100%",
+    height: "100%",
+    objectFit: "contain",
+    display: "block"}}
+    
     />
   </div>
 

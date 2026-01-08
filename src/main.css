@@ -249,3 +249,23 @@ a {
 .body {
   font-family: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
+
+.cqi-svg {
+  width: 100%;
+  max-width: 600px;
+  animation: scaleTurn 2.5s ease-in-out infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes scaleTurn {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.03) rotate(1deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
