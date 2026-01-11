@@ -27,15 +27,15 @@ const Footer = () => {
             <a href="mailto:chrismacaroline@gmail.com" target="_blank" style={footerIconStyle}>
               <FontAwesomeIcon icon={faEnvelope} />
             </a>
-            <a href="/images/CV.pdf" target="_blank" style={footerIconStyle}>
+            {/* <a href="/images/CV.pdf" target="_blank" style={footerIconStyle}>
               <FontAwesomeIcon icon={faFile} />
-            </a>
+            </a> */}
           </Col>
           
           <Col  className="d-flex justify-content-end">
             {/* Text */}
             <p style={{ color: "#ECECEC", fontSize: "20px", fontFamily: "roboto-black-italic", padding: "20px" }}>
-              © Chrisma Caroline Stephen 2025
+              © Chrisma Caroline Stephen 2026
             </p>
           </Col>
         </Row>

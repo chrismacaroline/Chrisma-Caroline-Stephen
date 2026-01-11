@@ -10,8 +10,9 @@ import Footer from './components/footer';
 import "./main.css"
 import ScrollToTop from "./ScrollToTop";
 import UIUXProjectsGallery from './components/UIUXProjectgallery';
-import POH from './components/POH';
+import POH from './components/CQI';
 import ProjectCard from './components/ProjectCard';
+import CQI from './components/CQI';
 function App() {
   return (
     <Router>
@@ -24,10 +25,11 @@ function App() {
         {/* <About /> */}
         <Routes>
           <Route path="/" element={<HomeCard />} />
-          <Route path="/projects" element={<ProjectsGallery/>} />
+         
           {/* <Route path="/projects" element={<Projects />} /> */}
-          <Route path="/projects/:projectId" element={<ProjectCard />} />
-          <Route path="/projects/:cqi" element={<POH />} />
+          <Route path="/projects/cqi" element={<CQI />} />
+           <Route path="/projects/:projectId" element={<ProjectCard />} />
+            <Route path="/projects" element={<ProjectsGallery/>} />
           {/* <Route path="/projectdetails" element={<Details  />} /> */}
           {/* <Route path="/project/:projectId" element={<ProjectsGallery />} /> */}
           <Route path="/links" element={<Links />} />
