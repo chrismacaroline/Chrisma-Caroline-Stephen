@@ -45,15 +45,22 @@ function CQI() {
             />
           </div>
 
-           {/* Outcome Summary */}
+          {/* Outcome Summary */}
           <section className="py-4">
-            <Card.Title className="fs-3 mb-3">Post-launch technical adjustments</Card.Title>
+            <Card.Title className="fs-3 mb-3">Summary</Card.Title>
             <Card.Text className="fs-5 text-muted">
-          
-            <ul className="ps-3 mt-2">
-                <li>Designed and shipped a real-time connection quality indicator for mesh-based WebRTC calls.</li>
-                <li>Made network-related call issues explicit, reducing confusion and improving user trust during degraded calls.</li>
-                 <li>Now used in all the white-labelled versions of the messenger.</li>
+              <ul className="ps-3 mt-2">
+                <li>
+                  Designed and shipped a real-time connection quality indicator
+                  for mesh-based WebRTC calls.
+                </li>
+                <li>
+                  Made network-related call issues explicit, reducing confusion
+                  and improving user trust during degraded calls.
+                </li>
+                <li>
+                  Now used in all the white-labelled versions of the messenger.
+                </li>
               </ul>
             </Card.Text>
           </section>
@@ -85,16 +92,18 @@ function CQI() {
             </Card.Text>
           </section>
 
-          {/* Overview */}
+          {/* ------------------------------------------------------------ */}
+
+          {/* Problem */}
           <section className="py-4">
             <Card.Title className="fs-2 mb-3">The Problem Statement</Card.Title>
-            <Card.Text className="fs-5 text-muted">
+            <Card.Text className="fs-4 text-muted">
               As shown below, the call screen lacked any visual indicators to
               signal changes in connection quality. The existing call screen was
               reviewed to identify user pain points and define a clear, solvable
               problem.
             </Card.Text>
-            <div className="col-12 col-md-6 d-flex justify-content-center w-100 pb-5">
+            <div className="col-12 col-md-6 d-flex justify-content-center w-100 py-5">
               <img
                 src="../images/mainmockup.png"
                 alt="image of a call screen"
@@ -112,42 +121,50 @@ function CQI() {
                 }
               />
             </div>
-            <Card.Text className="fs-5 text-muted">
+            <Card.Subtitle className="fs-3 mb-2">
               Key problems and questions considered:
-            </Card.Text>
-            <ul className="fs-5 text-muted ps-3">
-              <li className="mb-2">
-                What if the connection for a participant is weak or poor? How is
-                the lack of the information affecting user experience?
-              </li>
-              <li className="mb-2">
-                What if users can’t hear a participant clearly and the reason is
-                not obvious to the user?
-              </li>
-              <li className="mb-2">
-                What if a participant suddenly dropped out due to loss of
-                connection but there were no warnings to the other participants?
-              </li>
-            </ul>
-            <Card.Text className="fs-5 text-muted">
+            </Card.Subtitle>
+            <div className="px-5 px-sm-2 py-1">
+              <ol className="fs-4 text-muted">
+                <li className="mb-2">
+                  What if the connection for a participant is weak or poor? How
+                  is the lack of the information affecting user experience?
+                </li>
+                <li className="mb-2">
+                  What if users can’t hear a participant clearly and the reason
+                  is not obvious to the user?
+                </li>
+                <li className="mb-2">
+                  What if a participant suddenly dropped out due to loss of
+                  connection but there were no warnings to the other
+                  participants?
+                </li>
+              </ol>
+            </div>
+
+            <Card.Subtitle className="fs-3 mb-2">
               The problem was then clearly identified as below:
-            </Card.Text>
-            <ul className="fs-5 text-muted ps-3">
-              <li className="mb-2">
-                <strong>Primary issue: Lack of visual feedback</strong>{" "}
-                Participants were shown as “connected” even when network quality
-                degraded, making it difficult for users to understand the cause
-                of call issues such as dropped words, poor audio and lost
-                connections. This led to confusion and misplaced blame,
-                particularly in group calls with multiple peer connections.
-              </li>
-              <li className="mb-2">
-                <strong>Resulting impact:</strong> Call experience was
-                negatively impacted, leading to user frustration and decreased
-                trust in the application.
-              </li>
-            </ul>
+            </Card.Subtitle>
+            <div className="px-5 px-sm-2 py-1">
+              <ol className="fs-4 text-muted">
+                <li className="mb-3">
+                  <strong>Primary issue: Lack of visual feedback.</strong>{" "}
+                  Participants were shown as “connected” even when network
+                  quality degraded, making it difficult for users to understand
+                  the cause of call issues such as dropped words, poor audio and
+                  lost connections. This led to confusion and misplaced blame,
+                  particularly in group calls with multiple peer connections.
+                </li>
+                <li className="mb-3">
+                  <strong>Resulting impact:</strong> Call experience was
+                  negatively impacted, leading to user frustration and decreased
+                  trust in the application.
+                </li>
+              </ol>
+            </div>
           </section>
+
+          {/* ------------------------------------------------------------ */}
 
           {/* Research */}
           <section className="py-4">
@@ -328,7 +345,7 @@ function CQI() {
               seamlessly into a complex call UI, and align with users’ existing
               mental models from other communication apps.
             </Card.Text>
-{/* Iteration One */}
+            {/* Iteration One */}
             <Card.Subtitle className="fs-4 mb-4">Iteration One:</Card.Subtitle>
             <div className="col-12 col-md-6 d-flex justify-content-center w-100">
               <img
@@ -349,19 +366,20 @@ function CQI() {
               />
             </div>
             <Card.Text as="div" className="fs-5 text-muted">
-The good:
-  <ul className="ps-3 mt-2">
-    <li>This first iteration allowed us to visualise how the
-              indicator interacted with the existing call UI.</li>
-    <li>Directly
-              informed decisions that led to a cleaner, less visually congested
-              layout.</li>
-  
-  </ul>
-</Card.Text>
+              The good:
+              <ul className="ps-3 mt-2">
+                <li>
+                  This first iteration allowed us to visualise how the indicator
+                  interacted with the existing call UI.
+                </li>
+                <li>
+                  Directly informed decisions that led to a cleaner, less
+                  visually congested layout.
+                </li>
+              </ul>
+            </Card.Text>
 
             <Card.Text as="div" className="fs-5 text-muted">
-             
               <ul className="ps-3 mt-2">
                 <li>Indicators were oversized and visually dominant.</li>
                 <li>
@@ -377,7 +395,7 @@ The good:
           </section>
 
           {/* Iteration Two*/}
-          <section> 
+          <section>
             <Card.Subtitle className="fs-4 mb-4">Iteration Two:</Card.Subtitle>
             <div className="col-12 col-md-6 d-flex justify-content-center w-100">
               <img
@@ -398,28 +416,40 @@ The good:
               />
             </div>
             <Card.Text as="div" className="fs-5 text-muted">
-The good:
-  <ul className="ps-3 mt-2">
-    <li>The lack of a visual indicator near the main controls created space and clarity in the UI</li>
-    <li>The text labels provided feedback on the status of the connection.</li>
-  
-  </ul>
-</Card.Text>
+              The good:
+              <ul className="ps-3 mt-2">
+                <li>
+                  The lack of a visual indicator near the main controls created
+                  space and clarity in the UI
+                </li>
+                <li>
+                  The text labels provided feedback on the status of the
+                  connection.
+                </li>
+              </ul>
+            </Card.Text>
 
             <Card.Text as="div" className="fs-5 text-muted">
-             Insights and learnings:
+              Insights and learnings:
               <ul className="ps-3 mt-2">
-                <li>High cognitive load: Users had to actively read and interpret status labels during live calls.</li>
                 <li>
-                 Poor visual hierarchy and clarity: Multiple text colours failed to meet established UI and UX standards for glanceable status indicators.
+                  High cognitive load: Users had to actively read and interpret
+                  status labels during live calls.
+                </li>
+                <li>
+                  Poor visual hierarchy and clarity: Multiple text colours
+                  failed to meet established UI and UX standards for glanceable
+                  status indicators.
                 </li>
               </ul>
             </Card.Text>
           </section>
 
-           {/* Iteration Three*/}
-          <section> 
-            <Card.Subtitle className="fs-4 mb-4">Iteration Three:</Card.Subtitle>
+          {/* Iteration Three*/}
+          <section>
+            <Card.Subtitle className="fs-4 mb-4">
+              Iteration Three:
+            </Card.Subtitle>
             <div className="col-12 col-md-6 d-flex justify-content-center w-100">
               <img
                 src="../images/iterationthree.png"
@@ -439,30 +469,39 @@ The good:
               />
             </div>
             <Card.Text as="div" className="fs-5 text-muted">
-The good:
-  <ul className="ps-3 mt-2">
-    <li> This iteration helped validate indicator placement. This tied in well with the rest of the UI, avoided distracting
-      from call and communicated each participant's
-      connection quality.</li>
-    <li>The standard coloured label text improved readability, while reducing the risk of users
-      misinterpreting the indicator. </li>
-  
-  </ul>
-</Card.Text>
+              The good:
+              <ul className="ps-3 mt-2">
+                <li>
+                  {" "}
+                  This iteration helped validate indicator placement. This tied
+                  in well with the rest of the UI, avoided distracting from call
+                  and communicated each participant's connection quality.
+                </li>
+                <li>
+                  The standard coloured label text improved readability, while
+                  reducing the risk of users misinterpreting the indicator.{" "}
+                </li>
+              </ul>
+            </Card.Text>
 
             <Card.Text as="div" className="fs-5 text-muted">
-             Insights and learnings:
+              Insights and learnings:
               <ul className="ps-3 mt-2">
-                <li>The UI is overloaded with information which will increase cognitive load for callers.</li>
                 <li>
-                 We will need to minimise and simplify the indicators further.
+                  The UI is overloaded with information which will increase
+                  cognitive load for callers.
+                </li>
+                <li>
+                  We will need to minimise and simplify the indicators further.
                 </li>
               </ul>
             </Card.Text>
           </section>
-           {/* Iteration Four*/}
-          <section> 
-            <Card.Subtitle className="fs-4 mb-4">The Winning Design:</Card.Subtitle>
+          {/* Iteration Four*/}
+          <section>
+            <Card.Subtitle className="fs-4 mb-4">
+              The Winning Design:
+            </Card.Subtitle>
             <div className="col-12 col-md-6 d-flex justify-content-center w-100">
               <img
                 src="../images/iterationfour.png"
@@ -482,35 +521,52 @@ The good:
               />
             </div>
             <Card.Text as="div" className="fs-5 text-muted">
-The good:
-  <ul className="ps-3 mt-2">
-    <li>The connection status is highlighted only when there is an issue (weak, poor). This drastically reduced coginitive load.</li>
-    <li>The indicators and labels blended in with the UI, and moved the design into production.</li>
-  
-  </ul>
-</Card.Text>
+              The good:
+              <ul className="ps-3 mt-2">
+                <li>
+                  The connection status is highlighted only when there is an
+                  issue (weak, poor). This drastically reduced coginitive load.
+                </li>
+                <li>
+                  The indicators and labels blended in with the UI, and moved
+                  the design into production.
+                </li>
+              </ul>
+            </Card.Text>
 
             <Card.Text as="div" className="fs-5 text-muted">
-             Insights and learnings:
+              Insights and learnings:
               <ul className="ps-3 mt-2">
-                <li>Most often, as with any design, simpler works better for users. </li>
                 <li>
-                 Good UX and UI does not stand out but invisible and subtle.
+                  Most often, as with any design, simpler works better for
+                  users.{" "}
+                </li>
+                <li>
+                  Good UX and UI does not stand out but invisible and subtle.
                 </li>
               </ul>
             </Card.Text>
           </section>
 
-           {/* Design Handoff and First implementation */}
+          {/* Design Handoff and First implementation */}
           <section className="py-4">
-            <Card.Title className="fs-3 mb-3">Post-launch technical adjustments</Card.Title>
+            <Card.Title className="fs-3 mb-3">
+              Post-launch technical adjustments
+            </Card.Title>
             <Card.Text className="fs-5 text-muted">
-            After the first implementation and testing, the technical calculations for call quality had to be tightened in order to reduce flickering and rapid changes in the indication.
-            The changes implemented include:
-            <ul className="ps-3 mt-2">
-                <li>In corporate the round trip time to improve accuracy of the calulations</li>
+              After the first implementation and testing, the technical
+              calculations for call quality had to be tightened in order to
+              reduce flickering and rapid changes in the indication. The changes
+              implemented include:
+              <ul className="ps-3 mt-2">
                 <li>
-                 Pace the changes to the UI but setting time intervals before a new state is shown to the user. This reduced the flcikering of the icons.
+                  In corporate the round trip time to improve accuracy of the
+                  calulations
+                </li>
+                <li>
+                  Pace the changes to the UI but setting time intervals before a
+                  new state is shown to the user. This reduced the flcikering of
+                  the icons.
                 </li>
               </ul>
             </Card.Text>
@@ -520,7 +576,12 @@ The good:
           <section className="py-4">
             <Card.Title className="fs-3 mb-3">Impact</Card.Title>
             <Card.Text className="fs-5 text-muted">
-            The connection quality indicator helped users understand when call issues were caused by poor network conditions rather than the application itself. By showing problems early, users could know the reason for dropped audio or disconnects instead of guessing or blaming the messenger. This reduced confusion during calls and protect the trust in the application's call experience.
+              The connection quality indicator helped users understand when call
+              issues were caused by poor network conditions rather than the
+              application itself. By showing problems early, users could know
+              the reason for dropped audio or disconnects instead of guessing or
+              blaming the messenger. This reduced confusion during calls and
+              protect the trust in the application's call experience.
             </Card.Text>
           </section>
         </Card.Body>
