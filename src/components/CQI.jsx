@@ -45,6 +45,19 @@ function CQI() {
             />
           </div>
 
+           {/* Outcome Summary */}
+          <section className="py-4">
+            <Card.Title className="fs-3 mb-3">Post-launch technical adjustments</Card.Title>
+            <Card.Text className="fs-5 text-muted">
+          
+            <ul className="ps-3 mt-2">
+                <li>Designed and shipped a real-time connection quality indicator for mesh-based WebRTC calls.</li>
+                <li>Made network-related call issues explicit, reducing confusion and improving user trust during degraded calls.</li>
+                 <li>Now used in all the white-labelled versions of the messenger.</li>
+              </ul>
+            </Card.Text>
+          </section>
+
           {/* Role */}
           <section className="py-4">
             <Card.Title className="fs-3 mb-3">Role</Card.Title>
@@ -112,7 +125,7 @@ function CQI() {
                 not obvious to the user?
               </li>
               <li className="mb-2">
-                 What if a participant suddenly dropped out due to loss of
+                What if a participant suddenly dropped out due to loss of
                 connection but there were no warnings to the other participants?
               </li>
             </ul>
@@ -348,7 +361,7 @@ The good:
 </Card.Text>
 
             <Card.Text as="div" className="fs-5 text-muted">
-              The bad:
+             
               <ul className="ps-3 mt-2">
                 <li>Indicators were oversized and visually dominant.</li>
                 <li>
@@ -394,7 +407,7 @@ The good:
 </Card.Text>
 
             <Card.Text as="div" className="fs-5 text-muted">
-              The bad:
+             Insights and learnings:
               <ul className="ps-3 mt-2">
                 <li>High cognitive load: Users had to actively read and interpret status labels during live calls.</li>
                 <li>
@@ -404,15 +417,110 @@ The good:
             </Card.Text>
           </section>
 
+           {/* Iteration Three*/}
+          <section> 
+            <Card.Subtitle className="fs-4 mb-4">Iteration Three:</Card.Subtitle>
+            <div className="col-12 col-md-6 d-flex justify-content-center w-100">
+              <img
+                src="../images/iterationthree.png"
+                alt="image of iteration three of design"
+                className="img-fluid w-100 rounded-3"
+                style={{
+                  maxWidth: "800px",
+                  maxHeight: "800px",
+                  transition: "transform 0.3s ease",
+                }}
+                onMouseEnter={(e) =>
+                  (e.currentTarget.style.transform = "scale(1.03)")
+                }
+                onMouseLeave={(e) =>
+                  (e.currentTarget.style.transform = "scale(1)")
+                }
+              />
+            </div>
+            <Card.Text as="div" className="fs-5 text-muted">
+The good:
+  <ul className="ps-3 mt-2">
+    <li> This iteration helped validate indicator placement. This tied in well with the rest of the UI, avoided distracting
+      from call and communicated each participant's
+      connection quality.</li>
+    <li>The standard coloured label text improved readability, while reducing the risk of users
+      misinterpreting the indicator. </li>
+  
+  </ul>
+</Card.Text>
+
+            <Card.Text as="div" className="fs-5 text-muted">
+             Insights and learnings:
+              <ul className="ps-3 mt-2">
+                <li>The UI is overloaded with information which will increase cognitive load for callers.</li>
+                <li>
+                 We will need to minimise and simplify the indicators further.
+                </li>
+              </ul>
+            </Card.Text>
+          </section>
+           {/* Iteration Four*/}
+          <section> 
+            <Card.Subtitle className="fs-4 mb-4">The Winning Design:</Card.Subtitle>
+            <div className="col-12 col-md-6 d-flex justify-content-center w-100">
+              <img
+                src="../images/iterationfour.png"
+                alt="image of iteration three of design"
+                className="img-fluid w-100 rounded-3"
+                style={{
+                  maxWidth: "800px",
+                  maxHeight: "800px",
+                  transition: "transform 0.3s ease",
+                }}
+                onMouseEnter={(e) =>
+                  (e.currentTarget.style.transform = "scale(1.03)")
+                }
+                onMouseLeave={(e) =>
+                  (e.currentTarget.style.transform = "scale(1)")
+                }
+              />
+            </div>
+            <Card.Text as="div" className="fs-5 text-muted">
+The good:
+  <ul className="ps-3 mt-2">
+    <li>The connection status is highlighted only when there is an issue (weak, poor). This drastically reduced coginitive load.</li>
+    <li>The indicators and labels blended in with the UI, and moved the design into production.</li>
+  
+  </ul>
+</Card.Text>
+
+            <Card.Text as="div" className="fs-5 text-muted">
+             Insights and learnings:
+              <ul className="ps-3 mt-2">
+                <li>Most often, as with any design, simpler works better for users. </li>
+                <li>
+                 Good UX and UI does not stand out but invisible and subtle.
+                </li>
+              </ul>
+            </Card.Text>
+          </section>
+
+           {/* Design Handoff and First implementation */}
+          <section className="py-4">
+            <Card.Title className="fs-3 mb-3">Post-launch technical adjustments</Card.Title>
+            <Card.Text className="fs-5 text-muted">
+            After the first implementation and testing, the technical calculations for call quality had to be tightened in order to reduce flickering and rapid changes in the indication.
+            The changes implemented include:
+            <ul className="ps-3 mt-2">
+                <li>In corporate the round trip time to improve accuracy of the calulations</li>
+                <li>
+                 Pace the changes to the UI but setting time intervals before a new state is shown to the user. This reduced the flcikering of the icons.
+                </li>
+              </ul>
+            </Card.Text>
+          </section>
+
           {/* Impact */}
           <section className="py-4">
             <Card.Title className="fs-3 mb-3">Impact</Card.Title>
             <Card.Text className="fs-5 text-muted">
-              The indicator improved transparency during calls, reduced
-              confusion, and helped users understand when issues were
-              network-related. This led to clearer expectations, better
-              communication, and an overall improvement in call confidence and
-              experience.
+            The connection quality indicator helped users understand when call issues were caused by poor network conditions rather than the application itself. By showing problems early, users could know the reason for dropped audio or disconnects instead of guessing or blaming the messenger. This reduced confusion during calls and protect the trust in the application's call experience.
             </Card.Text>
           </section>
         </Card.Body>
