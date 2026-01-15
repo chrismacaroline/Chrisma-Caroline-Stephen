@@ -102,7 +102,7 @@ function CQI() {
                 className="img-fluid w-100 rounded-3"
                 style={{
                   maxWidth: "500px",
-                  maxHeight: "500px",
+                  maxHeight: "700px",
                   transition: "transform 0.3s ease",
                 }}
                 onMouseEnter={(e) =>
@@ -114,43 +114,34 @@ function CQI() {
               />
             </div>
             <Card.Subtitle className="fs-3 mb-2">
-              Key problems and questions considered:
+             User Experience Issues Identified:
             </Card.Subtitle>
-            <div className="py-1">
+            <div className="py-1 ps-1 ps-md-4">
               <ol className="fs-4 text-muted">
                 <li className="mb-2">
-                  What if the connection for a participant is weak or poor? How
-                  is the lack of the information affecting user experience?
+                 Users could not tell when call issues were caused by poor network conditions.
                 </li>
                 <li className="mb-2">
-                  What if users can’t hear a participant clearly and the reason
-                  is not obvious to the user?
+                  Audio dropouts and disconnects lacked explanation or warning.
                 </li>
                 <li className="mb-2">
-                  What if a participant suddenly dropped out due to loss of
-                  connection but there were no warnings to the other
-                  participants?
+                  Participants were shown as “connected” even when connection quality had degraded.
                 </li>
               </ol>
             </div>
 
             <Card.Subtitle className="fs-3 mb-2">
-              The problem was then clearly identified as below:
+              These insights shaped a clear problem definition:
             </Card.Subtitle>
-            <div className="py-1">
+            <div className="py-1 ps-1 ps-md-4">
               <ol className="fs-4 text-muted">
                 <li className="mb-3">
                   <strong>Primary issue: Lack of visual feedback.</strong>{" "}
-                  Participants were shown as “connected” even when network
-                  quality degraded, making it difficult for users to understand
-                  the cause of call issues such as dropped words, poor audio and
-                  lost connections. This led to confusion and misplaced blame,
+                  This led to confusion and misplaced blame,
                   particularly in group calls with multiple peer connections.
                 </li>
                 <li className="mb-3">
-                  <strong>Resulting impact:</strong> Call experience was
-                  negatively impacted, leading to user frustration and decreased
-                  trust in the application.
+                  <strong>Resulting impact:</strong> Inconsistent call quality caused frustration during group calls and reduced overall usage of the feature.
                 </li>
               </ol>
             </div>
@@ -161,15 +152,12 @@ function CQI() {
           {/* Research */}
           <section className="py-4">
             <Card.Title className="fs-2 mb-3">Research</Card.Title>
-            <Card.Subtitle className="fs-4 mb-4">
+            <Card.Subtitle className="fs-3 mb-4">
               Competitive Analysis:
             </Card.Subtitle>
             <Card.Text className="fs-5 text-muted">
-              Competitive analysis across WhatsApp, Telegram, Signal, Zoom, and
-              Google Meet revealed that most platforms only surface local
-              connection state. On our application, the challenge was greater
-              due to a mesh-based WebRTC architecture requiring monitoring of
-              multiple peer connections in real time.
+              Competitive analysis was perfomed across various messenger and call platforms including WhatsApp, Telegram, Signal, Zoom, and
+              Google Meet. 
             </Card.Text>
             <div className="row justify-content-center pb-5 g-sm-5">
               <div className="col-12 col-md-6 d-flex justify-content-center mb-4 mb-md-0 px-sm-2">
@@ -210,135 +198,124 @@ function CQI() {
                 />
               </div>
             </div>
-          </section>
-          <Card.Subtitle className="fs-4 mb-4">Observations:</Card.Subtitle>
-          <ul className="fs-5 text-muted ps-3">
+         
+          <Card.Subtitle className="fs-3 mb-4">Observations:</Card.Subtitle>
+          <ul className="fs-5 text-muted ps-2">
             <li className="mb-2">
-              Most apps do not monitor or display other participants’ connection
-              strength — users only see their own connection status.
+              Most applications do not monitor or display other participants’ connection
+              strength. Users only see their own connection status.
             </li>
             <li className="mb-2">
-              The style and clarity of indicators vary, ranging from signal bars
-              to vague toast messages like “Connecting…”
+             Indicator styles varied, including text labels, icons, and animations, from signal bars to toast messages like “Connecting…”.
             </li>
             <li className="mb-2">
-              There were clear gaps in visual feedback and diagnostics, making
-              it difficult for users to understand the cause of call
-              disruptions, especially in group settings
+              Visual feedback and diagnostics were inconsistent, and it was often unclear whose connection was affected.
             </li>
           </ul>
 
           <Card.Subtitle className="fs-4 mb-4">
             {" "}
-            A Unique Technical & UX/UI Challenge:
+            A Unique Technical & UX/UI Challenge for our product:
           </Card.Subtitle>
           <Card.Text className="fs-5 text-muted">
-            In our product, we were building a mesh-based peer-to-peer call
-            system, where every participant connects directly to each other.
+            Mesh-based peer-to-peer call meant that every participant connected directly to each other.
             This architecture demanded:
           </Card.Text>
-          <ul className="fs-5 text-muted ps-3">
+          <ol className="fs-5 text-muted ps-3">
             <li className="mb-2">
               Real-time monitoring of multiple peer connections, not just local
               network strength.
             </li>
             <li className="mb-2">
-              A method to define and implement thresholds for signal quality, as
-              most popular platforms don’t publicly document their criteria for
-              “poor” or “unstable” connections.
+              A method to define and implement thresholds for signal quality.
             </li>
             <li className="mb-2">
-              A minimal, unobtrusive UI that could still give users helpful
-              feedback about connection issues without overwhelming the call
+              A minimal, unobtrusive UI that could give users helpful
+              feedback about connection issues without overwhelming the call screen
               interface.
             </li>
-          </ul>
+          </ol>
+           </section>
           {/* Technical Approach */}
           <section className="py-4">
-            <Card.Subtitle className="fs-4 mb-4">
+            <Card.Subtitle className="fs-3 mb-4">
               Technical research:
             </Card.Subtitle>
-            <Card.Text className="fs-5 text-muted">
-              The technical research focused on the available WebRTC metrics and
-              how we could convert them into an indicator for the user.
+            <Card.Text className="fs-4 text-muted">
+              The technical research focused on the available WebRTC metrics to find answers to:
             </Card.Text>
-            <ol className="fs-5 text-muted ps-3">
+            <ol className="fs-4 text-muted ps-1">
               <li className="mb-2">
                 Which metrics should be considered to calculate connection
                 strength?
               </li>
               <li className="mb-2">
-                How can connection strength be efficiently monitored across the
-                mesh throughout the call?
+                How to efficiently monitor the entire mesh, throughout the call?
               </li>
               <li className="mb-2">
                 How to balance between sensitivity and reducing visual noise for
                 users?
               </li>
               <li className="mb-2">
-                How do we translate these metrics into a clear UI indicator that
+                How to translate these metrics into a clear UI indicator that
                 users can understand at a glance?
               </li>
             </ol>
-            <Card.Text className="fs-5 text-muted">Research methods:</Card.Text>
-            <ul className="fs-5 text-muted ps-3">
-              <li className="mb-2">
+            <Card.Subtitle className="fs-4 text-muted">Research methods:</Card.Subtitle>
+            <ul className="fs-4 text-muted ps-1">
+              <li className="fs-4 text-muted mb-2">
                 <strong>Call log analysis: </strong>
                 Analysed historical call logs from multiple peer-to-peer
                 sessions.
               </li>
-              <li className="mb-2">
+              <li className="fs-4 text-muted mb-2">
                 <strong>WebRTC Protocol & Standards Review: </strong>
                 Reviewed WebRTC peer-to-peer connectivity documentation,
                 including ICE workflows and RTCIceCandidate negotiation.
               </li>
             </ul>
-            <Card.Subtitle className="fs-4 mb-4">
+            <Card.Subtitle className="fs-3 mb-4">
               Technical summary for connection quality indicators:
             </Card.Subtitle>
-            <ol className="fs-5 text-muted ps-3">
-              <li className="mb-2">
+            <ol className="fs-4 text-muted ps-1">
+              <li className="fs-4 text-muted mb-2">
                 Connection strength is calculated using a combination of network
                 cost values and round-trip time (RTT), with conservative
                 thresholds chosen to prioritise early detection of degraded call
                 quality.
               </li>
-              <li className="mb-2">
-                Initial network cost thresholds were defined for the first
+              <li className="fs-4 text-muted mb-2">
+                Network cost thresholds were defined for the first
                 implementation:
-              </li>
-              <li className="mb-2">
-                Initial network cost thresholds were defined for the first
-                implementation:
-                <ul className="mt-2">
+                <ul className="fs-4 text-muted mt-2">
                   <li>Good connection: Less than 300</li>
                   <li>Weak connection: 300–600</li>
                   <li>Poor connection: Above 600</li>
                 </ul>
               </li>
               <li className="mb-2">
-                These thresholds were set as initial hypotheses and designed to
+                These thresholds were set as initial hypotheses, to
                 be iteratively refined based on testing and user feedback.
               </li>
             </ol>
-            <Card.Text className="fs-5 text-muted">
+            {/* <Card.Text className="fs-4 text-muted">
               This approach allowed us to surface connection issues early,
               without overwhelming users with fluctuating or noisy indicators.
-            </Card.Text>
+            </Card.Text> */}
           </section>
           {/* UI Indicator */}
-          <section>
-            <Card.Subtitle className="fs-4 mb-4">
+          <section className="py-4">
+            <Card.Subtitle className="fs-3 mb-4">
               Designing the Indicator:
             </Card.Subtitle>
-            <Card.Text className="fs-5 text-muted">
+            <Card.Text className="fs-4 text-muted">
               The indicator needed to communicate connection quality at a
               glance, attract attention only when necessary, integrate
               seamlessly into a complex call UI, and align with users’ existing
               mental models from other communication apps.
             </Card.Text>
             {/* Iteration One */}
-            <Card.Subtitle className="fs-4 mb-4">Iteration One:</Card.Subtitle>
+            <Card.Subtitle className="fs-3 mb-4">Iteration One: Icon-only Indicators</Card.Subtitle>
             <div className="col-12 col-md-6 d-flex justify-content-center w-100">
               <img
                 src="../images/iterationone.png"
@@ -346,7 +323,7 @@ function CQI() {
                 className="img-fluid w-100 rounded-3"
                 style={{
                   maxWidth: "500px",
-                  maxHeight: "500px",
+                  maxHeight: "700px",
                   transition: "transform 0.3s ease",
                 }}
                 onMouseEnter={(e) =>
@@ -357,8 +334,8 @@ function CQI() {
                 }
               />
             </div>
-            <Card.Text as="div" className="fs-5 text-muted">
-              The good:
+            <Card.Text as="div" className="fs-4 text-muted">
+              What worked:
               <ul className="ps-3 mt-2">
                 <li>
                   This first iteration allowed us to visualise how the indicator
@@ -371,11 +348,11 @@ function CQI() {
               </ul>
             </Card.Text>
 
-            <Card.Text as="div" className="fs-5 text-muted">
-              <ul className="ps-3 mt-2">
+            <Card.Text as="div" className="fs-4 text-muted">Key learnings:
+              <ul className="ps-1 mt-2">
                 <li>Indicators were oversized and visually dominant.</li>
                 <li>
-                  Placement increased UI clutter and distracted from core call
+                  Icon placement distracted from core call
                   actions.
                 </li>
                 <li>
@@ -388,15 +365,15 @@ function CQI() {
 
           {/* Iteration Two*/}
           <section>
-            <Card.Subtitle className="fs-4 mb-4">Iteration Two:</Card.Subtitle>
+            <Card.Subtitle className="fs-3 mb-4">Iteration Two: Label-based Feedback</Card.Subtitle>
             <div className="col-12 col-md-6 d-flex justify-content-center w-100">
               <img
                 src="../images/iterationtwo.png"
                 alt="image of iteration one of design"
                 className="img-fluid w-100 rounded-3"
                 style={{
-                  maxWidth: "400px",
-                  maxHeight: "500px",
+                  maxWidth: "500px",
+                  maxHeight: "700px",
                   transition: "transform 0.3s ease",
                 }}
                 onMouseEnter={(e) =>
@@ -407,12 +384,11 @@ function CQI() {
                 }
               />
             </div>
-            <Card.Text as="div" className="fs-5 text-muted">
-              The good:
-              <ul className="ps-3 mt-2">
+            <Card.Text as="div" className="fs-4 text-muted">
+              What worked:
+              <ul className="ps-1 mt-2">
                 <li>
-                  The lack of a visual indicator near the main controls created
-                  space and clarity in the UI
+                  The more space and clarity in the UI when the connection indicator did not crowd the core controls.
                 </li>
                 <li>
                   The text labels provided feedback on the status of the
@@ -421,16 +397,16 @@ function CQI() {
               </ul>
             </Card.Text>
 
-            <Card.Text as="div" className="fs-5 text-muted">
-              Insights and learnings:
-              <ul className="ps-3 mt-2">
+            <Card.Text as="div" className="fs-4 text-muted">
+              Key learnings:
+              <ul className="ps-1 mt-2">
                 <li>
                   High cognitive load: Users had to actively read and interpret
                   status labels during live calls.
                 </li>
                 <li>
                   Poor visual hierarchy and clarity: Multiple text colours
-                  failed to meet established UI and UX standards for glanceable
+                  failed to meet UI and UX standards for glanceable
                   status indicators.
                 </li>
               </ul>
@@ -439,8 +415,8 @@ function CQI() {
 
           {/* Iteration Three*/}
           <section>
-            <Card.Subtitle className="fs-4 mb-4">
-              Iteration Three:
+            <Card.Subtitle className="fs-3 mb-4">
+              Iteration Three: Icon + Label Design
             </Card.Subtitle>
             <div className="col-12 col-md-6 d-flex justify-content-center w-100">
               <img
@@ -460,18 +436,15 @@ function CQI() {
                 }
               />
             </div>
-            <Card.Text as="div" className="fs-5 text-muted">
-              The good:
-              <ul className="ps-3 mt-2">
+            <Card.Text as="div" className="fs-4 text-muted">
+             What worked:
+              <ul className="ps-1 mt-2">
                 <li>
-                  {" "}
-                  This iteration helped validate indicator placement. This tied
-                  in well with the rest of the UI, avoided distracting from call
+                  This iteration validated indicator placement, as it fit well with the rest of the UI
                   and communicated each participant's connection quality.
                 </li>
                 <li>
-                  The standard coloured label text improved readability, while
-                  reducing the risk of users misinterpreting the indicator.{" "}
+                  The standard coloured label text + icon improved readability.
                 </li>
               </ul>
             </Card.Text>
@@ -480,19 +453,19 @@ function CQI() {
               Insights and learnings:
               <ul className="ps-3 mt-2">
                 <li>
-                  The UI is overloaded with information which will increase
-                  cognitive load for callers.
+                  The UI is heavy with information which increases
+                  cognitive load.
                 </li>
                 <li>
-                  We will need to minimise and simplify the indicators further.
+                  Need to minimise and simplify the UI while the design is maintained.
                 </li>
               </ul>
             </Card.Text>
           </section>
           {/* Iteration Four*/}
           <section>
-            <Card.Subtitle className="fs-4 mb-4">
-              The Winning Design:
+            <Card.Subtitle className="fs-3 mb-4">
+              Final Design: Contextual Icon + Label
             </Card.Subtitle>
             <div className="col-12 col-md-6 d-flex justify-content-center w-100">
               <img
@@ -512,12 +485,12 @@ function CQI() {
                 }
               />
             </div>
-            <Card.Text as="div" className="fs-5 text-muted">
+            <Card.Text as="div" className="fs-4 text-muted">
               The good:
-              <ul className="ps-3 mt-2">
+              <ul className="ps-1 mt-2">
                 <li>
                   The connection status is highlighted only when there is an
-                  issue (weak, poor). This drastically reduced coginitive load.
+                  issue (weak, poor). This drastically reduces coginitive load.
                 </li>
                 <li>
                   The indicators and labels blended in with the UI, and moved
@@ -526,15 +499,11 @@ function CQI() {
               </ul>
             </Card.Text>
 
-            <Card.Text as="div" className="fs-5 text-muted">
+            <Card.Text as="div" className="fs-4 text-muted">
               Insights and learnings:
-              <ul className="ps-3 mt-2">
+              <ul className="ps-1 mt-2">
                 <li>
-                  Most often, as with any design, simpler works better for
-                  users.{" "}
-                </li>
-                <li>
-                  Good UX and UI does not stand out but invisible and subtle.
+                 Show indicators only when contextually necessary.
                 </li>
               </ul>
             </Card.Text>
@@ -545,35 +514,35 @@ function CQI() {
             <Card.Title className="fs-2 mb-3">
               Post-launch technical adjustments
             </Card.Title>
-            <Card.Text className="fs-5 text-muted">
+            <Card.Text className="fs-4 text-muted">
               After the first implementation and testing, the technical
               calculations for call quality had to be tightened in order to
               reduce flickering and rapid changes in the indication. The changes
               implemented include:
-              <ul className="ps-3 mt-2">
+              <ol className="ps-1 mt-2">
                 <li>
-                  In corporate the round trip time to improve accuracy of the
-                  calulations
+                  Incorporate the round trip time to improve accuracy of the
+                  calulations.
                 </li>
                 <li>
-                  Pace the changes to the UI but setting time intervals before a
-                  new state is shown to the user. This reduced the flcikering of
+                  Pace the changes to the UI by setting time intervals before a
+                  new state is shown to the user. This reduced the flickering of
                   the icons.
                 </li>
-              </ul>
+              </ol>
             </Card.Text>
           </section>
 
           {/* Impact */}
           <section className="py-4">
             <Card.Title className="fs-2 mb-3">Impact</Card.Title>
-            <Card.Text className="fs-5 text-muted">
+            <Card.Text className="fs-4 text-muted">
               The connection quality indicator helped users understand when call
               issues were caused by poor network conditions rather than the
               application itself. By showing problems early, users could know
               the reason for dropped audio or disconnects instead of guessing or
               blaming the messenger. This reduced confusion during calls and
-              protect the trust in the application's call experience.
+              protected the trust in the application's call experience.
             </Card.Text>
           </section>
         </Card.Body>
