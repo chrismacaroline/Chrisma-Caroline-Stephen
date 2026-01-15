@@ -10,6 +10,7 @@ const Contact = () => {
 
   return (
       <Container className="container-fluid d-flex min-vh-100 justify-content-center align-items-center" style={{ backgroundColor: "#f8f9fa",color: "#212529" }}>
+        
         <div>
           {/* <p
            
@@ -34,6 +35,7 @@ const Contact = () => {
             {" "}
             Let's connect!{" "}
           </p> */}
+          
           <div className="linkicon">
             {" "}
             <Links />

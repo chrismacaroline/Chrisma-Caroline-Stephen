@@ -8,6 +8,7 @@
      "imageMain" : "/images/POH - main.png",  
     "skill" : "API-JAVASCRIPT-JQUERY",
     "description" : "Discovering new hobbies can feel overwhelming due to unstructured information and unclear starting points. A guided, category-based web application was designed and built using JavaScript and multiple REST APIs to progressively surface relevant hobbies, videos, and reference content with minimal user effort. The experience reduces decision fatigue, provides clear next steps, and enables users to return to previously explored hobbies through persistent client-side storage, resulting in a smoother and more engaging exploration flow.",
+    "briefDescription" : "JavaScript web application consuming REST APIs for dynamic content rendering, with client-side persistence implemented using local storage.",
     "titleOne": "Application Landing Page: Start Hobby Exploration Here",
     "subtitleOne": "The page is styled minimally in design and content, with a single prominent call-to-action button.",
     "descriptionOne" : "Clicking the 'FIND NEW HOBBY' button will reveal six categories of hobbies to explore.",
@@ -39,9 +40,10 @@
  },
 {
   "id" :"cqi",
-  "name" : "WebRTC Connection Quality Indicator (P2P Calls)",
-  "image" : "../../images/Indicators.svg",
-  "description" : "In peer-to-peer calls, the absence of visual feedback around network quality often left users confused by distorted audio or dropped words. A WebRTC connection quality indicator was introduced to surface real-time network status directly within the call interface. By clearly signalling when call issues were network-related, this feature set clearer expectations, reduced user confusion, and improved overall confidence and experience during calls."
+  "name" : "WebRTC Connection Quality Indicator (Peer to Peer Calls)",
+  "image" : "../images/iterationfour.png",
+  "description" : "In peer-to-peer calls, the absence of visual feedback around network quality often left users confused by distorted audio or dropped words. A WebRTC connection quality indicator was introduced to surface real-time network status directly within the call interface. By clearly signalling when call issues were network-related, this feature set clearer expectations, reduced user confusion, and improved overall confidence and experience during calls.",
+  "briefDescription": "Designed and shipped a real-time connection quality indicator for mesh-based WebRTC calls. Combined WebRTC metrics with a minimal UI to surface network issues early without adding visual noise."
 }
 
 ]

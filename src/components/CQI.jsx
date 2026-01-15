@@ -16,17 +16,19 @@ function CQI() {
         style={{ width: "95%", boxShadow: "0 2px 6px rgba(0, 0, 0, 0.06)" }}
       >
         <Card.Body className="container-fluid display-flex justify-content-center">
+
           {/* Header */}
-          <Card.Title className="fs-1 mb-3">
+          <section className="py-4">
+          <Card.Title className="fs-2 mb-3">
             WebRTC Connection Quality Indicator
           </Card.Title>
 
-          <Card.Subtitle className="fs-4 text-muted mb-4">
+          <Card.Text className="fs-4 text-muted">
             Introducing a real-time network quality indicator for peer-to-peer
             calls in a secure messenger's mobile application.
-          </Card.Subtitle>
+          </Card.Text>
           {/* Hero Image */}
-          <div className="col-12 col-md-6 d-flex justify-content-center w-100">
+          <div className="col-12 col-md-6 d-flex justify-content-center w-100 py-5">
             <img
               src="../images/Indicators.svg"
               alt="image of a call screen"
@@ -44,47 +46,37 @@ function CQI() {
               }
             />
           </div>
+          </section>
 
           {/* Outcome Summary */}
           <section className="py-4">
-            <Card.Title className="fs-3 mb-3">Summary</Card.Title>
-            <Card.Text className="fs-5 text-muted">
-              <ul className="ps-3 mt-2">
-                <li>
-                  Designed and shipped a real-time connection quality indicator
-                  for mesh-based WebRTC calls.
-                </li>
-                <li>
-                  Made network-related call issues explicit, reducing confusion
-                  and improving user trust during degraded calls.
-                </li>
-                <li>
-                  Now used in all the white-labelled versions of the messenger.
-                </li>
-              </ul>
+            <Card.Title className="fs-2 mb-3">Summary</Card.Title>
+            <Card.Text className="fs-4 text-muted">
+              Designed and shipped a real-time connection quality indicator for mesh-based WebRTC calls, helping users understand when call issues were caused by network conditions rather than the application. The feature reduced confusion during degraded calls and is now used across all white-labelled versions of the messenger.
             </Card.Text>
           </section>
 
           {/* Role */}
           <section className="py-4">
-            <Card.Title className="fs-3 mb-3">Role</Card.Title>
-            <Card.Text className="fs-5 text-muted">
-              UX/UI Designer, UX Researcher
+            <Card.Title className="fs-2 mb-3">Role</Card.Title>
+            <Card.Text className="fs-4 text-muted">
+                Product Designer responsible for UX and UI, working closely with product
+  management, mobile engineering, and QA from concept through production.
             </Card.Text>
           </section>
 
           {/* Tools */}
           <section className="py-4">
-            <Card.Title className="fs-3 mb-3">Tools</Card.Title>
-            <Card.Text className="fs-5 text-muted">
+            <Card.Title className="fs-2 mb-3">Tools</Card.Title>
+            <Card.Text className="fs-4 text-muted">
               WebRTC, RTCPeerConnection, Figma, Notion, GitLab, Slack
             </Card.Text>
           </section>
 
           {/* Context and Timeline */}
           <section className="py-4">
-            <Card.Title className="fs-3 mb-3">Context</Card.Title>
-            <Card.Text className="fs-5 text-muted">
+            <Card.Title className="fs-2 mb-3">Context</Card.Title>
+            <Card.Text className="fs-4 text-muted">
               This work was carried out on a secure messaging and calling
               platform developed by Cogia Intelligence, designed to support
               end-to-end encrypted communication for government and
@@ -124,7 +116,7 @@ function CQI() {
             <Card.Subtitle className="fs-3 mb-2">
               Key problems and questions considered:
             </Card.Subtitle>
-            <div className="px-5 px-sm-2 py-1">
+            <div className="py-1">
               <ol className="fs-4 text-muted">
                 <li className="mb-2">
                   What if the connection for a participant is weak or poor? How
@@ -145,7 +137,7 @@ function CQI() {
             <Card.Subtitle className="fs-3 mb-2">
               The problem was then clearly identified as below:
             </Card.Subtitle>
-            <div className="px-5 px-sm-2 py-1">
+            <div className="py-1">
               <ol className="fs-4 text-muted">
                 <li className="mb-3">
                   <strong>Primary issue: Lack of visual feedback.</strong>{" "}
@@ -168,7 +160,7 @@ function CQI() {
 
           {/* Research */}
           <section className="py-4">
-            <Card.Title className="fs-3 mb-3">Research</Card.Title>
+            <Card.Title className="fs-2 mb-3">Research</Card.Title>
             <Card.Subtitle className="fs-4 mb-4">
               Competitive Analysis:
             </Card.Subtitle>
@@ -550,7 +542,7 @@ function CQI() {
 
           {/* Design Handoff and First implementation */}
           <section className="py-4">
-            <Card.Title className="fs-3 mb-3">
+            <Card.Title className="fs-2 mb-3">
               Post-launch technical adjustments
             </Card.Title>
             <Card.Text className="fs-5 text-muted">
@@ -574,7 +566,7 @@ function CQI() {
 
           {/* Impact */}
           <section className="py-4">
-            <Card.Title className="fs-3 mb-3">Impact</Card.Title>
+            <Card.Title className="fs-2 mb-3">Impact</Card.Title>
             <Card.Text className="fs-5 text-muted">
               The connection quality indicator helped users understand when call
               issues were caused by poor network conditions rather than the

@@ -10,7 +10,10 @@
 
 }
 .custom-toggler {
-  color: #f8f9fa; 
+  border: 2px solid #f8f9fa !important;
+}
+.custom-toggler:focus {   
+   border-color: #f8f9fa !important;    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25) !important;
 }
 
 .navbarmain {
