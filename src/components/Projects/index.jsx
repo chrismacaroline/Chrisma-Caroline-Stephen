@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 
 
 // eslint-disable-next-line react/prop-types
-function Projects ({id,image,name, description}) {
+function Projects ({id,image,name, briefDescription}) {
     const navigate = useNavigate();
 
   return (
@@ -22,35 +22,22 @@ function Projects ({id,image,name, description}) {
 >
   {/* Image */}
   <div
-    // className="w-100"
-    style={{
-       aspectRatio: "16 / 9",
-    overflow: "hidden",
-    borderTopLeftRadius: "12px",
-    borderTopRightRadius: "12px",
-    // backgroundColor: "#f1f3f5",
-    }}
-  >
-    <img
+   >
+    <Card.Img
       src={image}
     alt={name}
-    className="w-100 h-100"
-    style={{  width: "100%",
-    height: "100%",
-    objectFit: "contain",
-    display: "block"}}
-    
+    height={475}
     />
   </div>
 
   {/* Content */}
   <div className="px-3 py-3 d-flex flex-column flex-grow-1">
-    <Card.Title className="fs-5 fw-semibold mb-2">
+    <Card.Title className="fs-3 fw-medium mb-2">
       {name}
     </Card.Title>
 
-    <Card.Text className="fs-6 text-muted mb-3">
-      {description}
+    <Card.Text className="fs-4 text-muted mb-1">
+      {briefDescription}
     </Card.Text>
 
     {/* CTA */}

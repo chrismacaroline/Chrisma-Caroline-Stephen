@@ -67,7 +67,7 @@ function ProjectCard() {
                 style={{
                   boxShadow: "0 2px 5px rgba(255, 255, 255, 0.35)",
                   borderRadius: "16px",
-                  height: "55%%",
+                  height: "85%",
                   width: "100%",
                 }}
               >
@@ -76,11 +76,11 @@ function ProjectCard() {
                   autoPlay
                   muted
                   loop
-                  width="85%"
+                  width="100%"
                   style={{
                     boxShadow: "0 2px 5px rgba(255, 255, 255, 0.35)",
                     borderRadius: "12px",
-                    height: "60%%",
+                    height: "60%",
                     objectFit: "cover",
                   }}
                 >
